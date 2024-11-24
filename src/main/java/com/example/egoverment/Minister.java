@@ -1,3 +1,4 @@
+package com.example.egoverment;
 import java.time.LocalDate;
 public class Minister extends Human{
     private LocalDate startingDate;

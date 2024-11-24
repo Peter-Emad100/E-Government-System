@@ -1,3 +1,5 @@
+package com.example.egoverment;
+
 import java.util.Date;
 
 public class Request {
@@ -36,3 +38,4 @@ public class Request {
         return notices;
     }
 }
+

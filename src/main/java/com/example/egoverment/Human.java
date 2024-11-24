@@ -1,3 +1,5 @@
+package com.example.egoverment;
+
 public abstract class Human {
     private String name;
     private String id;
@@ -12,3 +14,4 @@ public abstract class Human {
         return id;
     }
 }
+

@@ -1,3 +1,4 @@
+package com.example.egoverment;
 import java.util.ArrayList;
 
 public class Ministry {

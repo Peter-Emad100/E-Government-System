@@ -1,3 +1,5 @@
+package com.example.egoverment;
+
 public class Loginer extends Human {
     private String loginName;
     private String Password;
@@ -15,3 +17,4 @@ public class Loginer extends Human {
     }
 
 }
+

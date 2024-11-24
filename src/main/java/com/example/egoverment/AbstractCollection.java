@@ -1,3 +1,5 @@
+package com.example.egoverment;
+
 import java.util.ArrayList;
 public abstract class AbstractCollection<T extends Loginer> {
     protected ArrayList<T> subLoginers= new ArrayList<T>();
