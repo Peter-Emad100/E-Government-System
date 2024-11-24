@@ -1,9 +1,12 @@
-import java.time.LocalTime;
+import java.time.LocalDate;
 
 public class Employee extends Human{
-    LocalTime startingDate;
+    private LocalDate startingDate;
+    public LocalDate getStartingDate(){
+        return startingDate;
+    }
     Employee(String name, String id){
         super(name,id);
-        startingDate=LocalTime.now();
+        startingDate=LocalDate.now();
     }
 }
