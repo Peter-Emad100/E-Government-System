@@ -1,7 +1,7 @@
 package com.example.egoverment;
 import java.time.LocalDate;
 public class Minister extends Human{
-    private final LocalDate startingDate;
+    private LocalDate startingDate;
     Minister(String name,String id){
         super(name,id);
         startingDate=LocalDate.now();
