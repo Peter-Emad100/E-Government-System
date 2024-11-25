@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/ElectricityBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfElectricity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +30,12 @@
     &quot;assignee&quot;: &quot;Peter-Emad100&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,
-    &quot;accountId&quot;: &quot;4cf26b7c-67d5-4aca-9e91-ed19ca7c1951&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Peter-Emad100/E-Government-System.git",
+    "accountId": "c2e6052a-e868-4477-884c-da13a3b99219"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -54,19 +55,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Ministry_of_Tourism.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/resources/com/example/egoverment",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ministry_of_Tourism.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/resources/com/example/egoverment&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\IdeaProjects\E-Government-System444\src\main\resources\com\example\egoverment\assets" />
@@ -162,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing...." />
     <MESSAGE value="tourism1" />
-    <option name="LAST_COMMIT_MESSAGE" value="tourism1" />
+    <MESSAGE value="tourism1 MinistryOfElectricity" />
+    <option name="LAST_COMMIT_MESSAGE" value="tourism1 MinistryOfElectricity" />
   </component>
 </project>
