@@ -10,7 +10,6 @@ public class Ministry {
         departments=new ArrayList<Department>();
         minister=new Minister(name,id);
     }
-
     public Minister getMinster() {
         return minister;
     }
