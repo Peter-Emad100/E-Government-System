@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<ScrollPane hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="841.0" vmax="6000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.egoverment.Ministry_Tourism">
+  <content>
+    <AnchorPane layoutX="-20.0" layoutY="-20.0" prefHeight="1366.0" prefWidth="918.0">
+         <children>
+            <ImageView fx:id="tut" fitHeight="162.0" fitWidth="238.0" layoutX="30.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/أسوان.jpeg" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="289.0" layoutY="139.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aswan, called Sunn by the ancient Egyptians, is one of the most important cities in the south of Egypt, and acted as its southern gateway throughout history. As necessary stop for all traders and merchants coming from Nubia through the Nile, it was the link between Egypt and Africa. Aswan is the site of many archaeological sites and important landmarks such as the island of Elephantine, the ancient Egyptian granite quarries including the Unfinished Obelisk, the Coptic monastery of St Simeon, and the Nubian Museum." wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <ImageView fx:id="tut1" fitHeight="162.0" fitWidth="238.0" layoutX="30.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/6.jpg" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="289.0" layoutY="351.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The archaeological site of Abu Mina features a number of structures, many of which are religious in nature. The most prominent of these is the tomb of the eponymous St. Menas (AD 285–309), whose fame during the late Roman Period made the site a popular destination for pilgrims seeking blessings.The ancient city and the saint’s tomb were eventually forgotten until they were discovered by the German archaeologist C.M. Kaufmann in the early 20th century. Earthed remains of the residential quarters of the city. " wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="11.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/new-logo_web.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="15.0" text="Ministry of Tourism">
+               <font>
+                  <Font name="Elephant" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="89.0" prefHeight="39.0" prefWidth="108.0" text="Aswan">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="305.0" prefHeight="39.0" prefWidth="108.0" text="Abu Mina">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="tut11" fitHeight="162.0" fitWidth="238.0" layoutX="30.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/img_20211214_132220.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="512.0" prefHeight="67.0" prefWidth="143.0" text="Gebel Silsila">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <TextFlow layoutX="290.0" layoutY="562.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gebel al-Silsila is a mountainous region with sandstone quarries on both sides of the Nile. The sandstone quarries of Gebel al-Silsila have been used from the Middle Kingdom (c. 2034–1650 BC) until the 20th century. More than a hundred quarries were exploited to extract the sandstone blocks needed to construct many of ancient Egypt’s famous temples. The quarries have preserved tool marks and workers’ inscriptions that can be seen today." wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="31.0" layoutY="715.0" prefHeight="67.0" prefWidth="143.0" text="Mary's Tree">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="tut111" fitHeight="162.0" fitWidth="238.0" layoutX="29.0" layoutY="765.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/منطقة-ا-ثار-شجرة-مريم.jpeg" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="284.0" layoutY="765.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The holy family sought refuge under a tree in Matariyya (the ancient city of Heliopolis), today known as “Mary’s Tree.” It became a popular religious site visited by many people from all over the world throughout the ages. The original tree eventually grew weak and fell in 1656 AD. A group of Franciscan priests gathered its branches and replanted them.Some French soldiers passed by the tree in 1800, during the battle of Ain Shams between the French and Ottoman armies. The soldiers carved their names with their swords into the tree’s branches." wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="30.0" layoutY="921.0" prefHeight="67.0" prefWidth="177.0" text="Al-Mu'izz Street">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="tut1111" fitHeight="162.0" fitWidth="238.0" layoutX="29.0" layoutY="969.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/5.jpg" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="284.0" layoutY="969.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Al-Muizz Street is named after the Fatimid Caliph, al-Muizz li-Din Allah (341–365 AH / 953–975 AD), who first founded this street. He is also the founder of the Fatimid caliphates in Egypt since he ruled Egypt in (358-365AH\ 969-975AD). Today, it is the largest open-air museum for Islamic monuments in the world, and a unique heritage site that was added to the UNESCO World Heritage List in 1979. The street has borne many names over the centuries, and in 1937 it came to be known as al-Muizz in honour of the founder of Cairo." wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="30.0" layoutY="1125.0" prefHeight="67.0" prefWidth="177.0" text="Alexandria">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="tut11111" fitHeight="162.0" fitWidth="238.0" layoutX="30.0" layoutY="1170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/roman-period.jpg" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="284.0" layoutY="1170.0" prefHeight="134.0" prefWidth="491.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alexander the Great founded Alexandria in 331 BC on the Mediterranean coast in northern Egypt, tucked in the western Delta. An ancient Egyptian town or city by the name of Raqote appears to have already existed here.After Alexander’s death in Babylon, in 323 BC, his generals fought amongst themselves for control over various territories of the empire. Ptolemy I Soter (306/5–283/2 BC) took control of Egypt, initiating the Ptolemaic Period." wrappingWidth="160.83123779296875">
+                     <font>
+                        <Font name="Dubai Medium" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="31.0" layoutY="46.0" prefHeight="64.0" prefWidth="262.0" text="Tourist Places" underline="true">
+               <font>
+                  <Font name="Dubai Medium" size="33.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
