@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Transportation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddMinistryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/AddMinistry.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +31,12 @@
     &quot;assignee&quot;: &quot;Peter-Emad100&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,
-    &quot;accountId&quot;: &quot;c2e6052a-e868-4477-884c-da13a3b99219&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Peter-Emad100/E-Government-System.git",
+    "accountId": "4cf26b7c-67d5-4aca-9e91-ed19ca7c1951"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -64,6 +66,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/java/com/example/egoverment",
     "last_opened_file_path": "C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/resources/com/example/egoverment",
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
@@ -75,9 +78,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\IdeaProjects\E-Government-System444\src\main\resources\com\example\egoverment" />
+      <recent name="C:\Users\Dell\IdeaProjects\E-Government-System444\src\main\java\com\example\egoverment" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ministry_Tourism">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.egoverment.HelloApplication" />
       <module name="EGoverment" />
@@ -119,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ministry_Tourism" />
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.Ministry_Tourism" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732806167908</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tourism1 MinistryOfElectricity">
+      <option name="closed" value="true" />
+      <created>1732809063833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732809063833</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
