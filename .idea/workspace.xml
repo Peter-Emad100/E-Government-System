@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Tourism.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/9-1-copy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/img_20211214_132220.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/new-logo_web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/roman-period.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/أسوان.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/assets/منطقة-ا-ثار-شجرة-مريم.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Transportation.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732567407757</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tourism1 MinistryOfElectricity">
+      <option name="closed" value="true" />
+      <created>1732806167908</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732806167908</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
