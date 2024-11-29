@@ -5,6 +5,7 @@ public class Ministry {
     static int numberOfMinistries;
     private Minister minister;
     private ArrayList<Department> departments;
+
     public Ministry(String name , String id){
         numberOfMinistries++;
         departments=new ArrayList<Department>();
@@ -13,4 +14,10 @@ public class Ministry {
     public Minister getMinster() {
         return minister;
     }
+
+    public void addDepartmentsToMinistry(String DeptName) {
+
+        departments.add(new Department(DeptName));
+    }
+
 }
