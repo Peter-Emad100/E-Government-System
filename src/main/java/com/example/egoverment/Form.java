@@ -5,9 +5,9 @@ import java.util.Date;
 
 public class Form {
     private String formName;
+    private int formId;
     ArrayList<Request>requests;
-    static int
-    public Form (String formName){
+    public Form (String formName, int formId){
         this.formName=formName;
         requests=new ArrayList<Request>();
     }
@@ -18,6 +18,11 @@ public class Form {
     public void addRequesttoForm(String Rname, String Rid , String Rnotices, String Rlocation, Date RbirthDate)
     {
         requests.add(new Request(Rname, Rid, Rnotices, Rlocation, RbirthDate));
+    }
+
+    public int getFormId()
+    {
+        return formId;
     }
 }
 

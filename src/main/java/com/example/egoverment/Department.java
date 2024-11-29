@@ -17,7 +17,7 @@ public class Department {
         return departmentName;
     }
 
-    public String getDepartmentID(){
+    public int getDepartmentID(){
         return departmentID;
     }
 
@@ -26,8 +26,8 @@ public class Department {
     {
         employees.add(new Employee(empName, empID));
     }
-    public void addFormtoDepartment(String formName)
+    public void addFormtoDepartment(String formName, int formId)
     {
-        forms.add(new Form(formName));
+        forms.add(new Form(formName, formId));
     }
 }

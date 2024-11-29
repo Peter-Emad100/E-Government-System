@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Ministry {
     static int numberOfMinistries;
     private Minister minister;
-    private ArrayList<Department> departments;
+    protected ArrayList<Department> departments;
 
     public Ministry(String name , String id){
         numberOfMinistries++;
@@ -15,9 +15,9 @@ public class Ministry {
         return minister;
     }
 
-    public void addDepartmentsToMinistry(String DeptName) {
+    public void addDepartmentsToMinistry(String DeptName, int ID) {
 
-        departments.add(new Department(DeptName));
+        departments.add(new Department(DeptName, ID));
     }
 
 }

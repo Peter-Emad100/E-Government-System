@@ -4,32 +4,34 @@ import java.util.Date;
 
 public class Ministry_Interior extends Ministry {
 
-    private ArrayList<Department> departments;
-    private int size;
-
 
     public Ministry_Interior(String name, String id)
     {
         super(name, id);
-        departments=new ArrayList<>();
-        super.addDepartmentsToMinistry("Department of Civil Status");
-        departments.get(0).addFormtoDepartment("Renew Social Security Number");
-
+        super.departments=new ArrayList<>();
+        super.addDepartmentsToMinistry("Department of Civil Status", 1);
+        super.departments.get(0).addFormtoDepartment("Renew Social Security Number", 1);
 
     }
 
-    public void addrequest(int deptID, String Rname, String Rid, String Rnotices, String Rlocation, Date RbirthDate)
+    public void addrequest(int deptID, int formID, String Rname, String Rid, String Rnotices, String Rlocation, Date RbirthDate)
     {
-        if(deptID>departments.size())
+        if(deptID>super.departments.size())
         {
             System.out.println("invalid department id");
         }
         else{
-            for(int i=0;i<departments.size();i++)
+            for(int i=0;i<super.departments.size();i++)
             {
-                if(departments.get(i).getDepartmentID().equals(deptID))
+                if(super.departments.get(i).getDepartmentID() == deptID)
                 {
-                    departments.get(deptID).forms.get(deptID).addRequesttoForm(Rname, Rid, Rnotices, Rlocation, RbirthDate);
+                    for(int j=0;j<super.departments.get(i).forms.size();j++)
+                    {
+                        if(formID == super.departments.get(i).forms.get(j).getFormId())
+                        {
+                            super.departments.get(deptID).forms.get(formID).addRequesttoForm(Rname, Rid, Rnotices, Rlocation, RbirthDate);
+                        }
+                    }
                 }
             }
         }
