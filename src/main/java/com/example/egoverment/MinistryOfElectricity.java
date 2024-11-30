@@ -34,6 +34,10 @@ public class MinistryOfElectricity {
         }
     }
 
+    public ElectricityBill getCurrentBill() {
+        return currentBill;
+    }
+
     public void loadBill(String fileName) {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             double amount = Double.parseDouble(reader.readLine());
