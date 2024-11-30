@@ -1,37 +1,35 @@
 package com.example.egoverment;
 
+import java.time.LocalDate;
+import java.time.YearMonth;
+
 public class ElectricityBill {
     private static int BillNo = 0;
     private static final double DEFAULT_BILL_AMOUNT = 850.00;
+
     private boolean isPaid;
     private final int billID;
-    //    private String dateIssued;
-    private String datePaid;
-    private String dueDate;
-    private double amount;
+    private final LocalDate dueDate;
+    private final double amount;
 
-    public ElectricityBill(double amount, String dueDate) {
-        BillNo += 1;
+    public ElectricityBill() {
+        BillNo += 1; // counts the number of bills made
         this.amount = DEFAULT_BILL_AMOUNT;
-        isPaid = false;
-        this.dueDate = dueDate;
-        billID = BillNo;
+        this.isPaid = false;
+        this.dueDate = calculateDueDate();
+        this.billID = BillNo; // adds a unique ID to each bill
     }
 
     public double getAmount() {
         return amount;
     }
 
-    public String getDueDate() {
-        return dueDate;
-    }
-
     public int getBillID() {
         return billID;
     }
 
-    public String getDatePaid() {
-        return datePaid;
+    public LocalDate getDueDate() {
+        return dueDate;
     }
 
     public boolean isPaid() {
@@ -42,7 +40,9 @@ public class ElectricityBill {
         this.isPaid = isPaid;
     }
 
-    public void setDatePaid(String datePaid) {
-        this.datePaid = datePaid;
+    // gets the end of the current month
+    private LocalDate calculateDueDate() {
+        YearMonth currentMonth = YearMonth.now(); // gets the current month
+        return currentMonth.atEndOfMonth(); // gets the last day of the month
     }
 }
