@@ -1,65 +1,75 @@
 package com.example.egoverment;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 public class Education_Controller {
 
     @FXML
-    private void showPrimaryStageImage() {
+    private void showPrimaryStageImage(ActionEvent event) {
         try {
             // Load the FXML for the primary stage images page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PrimaryStageImages.fxml"));
-            ScrollPane root = loader.load();  // Correct cast to ScrollPane
+            Parent root = FXMLLoader.load(getClass().getResource("PrimaryStageImages.fxml"));
 
-            // Create a new scene for the primary stage and show it
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Primary Stage Exams");
-            stage.setScene(scene);
-            stage.show();
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
         }
     }
 
     @FXML
-    private void showPreparatoryStageImage() {
+    private void showPreparatoryStageImage(ActionEvent event) {
         try {
             // Load the FXML for the preparatory stage images page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PreparatoryStageImages.fxml"));
-            AnchorPane root = loader.load();  // AnchorPane is used here
+            Parent root = FXMLLoader.load(getClass().getResource("PreparatoryStageImages.fxml"));
 
-            // Create a new scene for the preparatory stage and show it
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Preparatory Stage Images");
-            stage.setScene(scene);
-            stage.show();
+            // Get the current stage from the event source
+            Scene currentScene = ((javafx.scene.Node) event.getSource()).getScene();
+            currentScene.setRoot(root); // Switch the root
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
         }
     }
 
     @FXML
-    private void showSecondaryStageImage() {
+    private void showSecondaryStageImage(ActionEvent event) {
         try {
             // Load the FXML for the secondary stage images page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("SecondaryStageImages.fxml"));
-            AnchorPane root = loader.load();  // AnchorPane is used here
+            Parent root = FXMLLoader.load(getClass().getResource("SecondaryStageImages.fxml"));
 
-            // Create a new scene for the secondary stage and show it
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Secondary Stage Images");
-            stage.setScene(scene);
-            stage.show();
+            // Get the current stage from the event source
+            Scene currentScene = ((javafx.scene.Node) event.getSource()).getScene();
+            currentScene.setRoot(root); // Switch the root
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
+    @FXML
+    private void handleBackAction(ActionEvent event) {
+        try {
+            // Load the Education.fxml
+            Parent root = FXMLLoader.load(getClass().getResource("Education.fxml"));
+
+            // Get the current stage (window) from the back button action
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+            // Create a new scene with the loaded Education.fxml root
+            Scene scene = new Scene(root);
+            stage.setScene(scene);  // Set the scene to Education.fxml
+            stage.show();  // Show the Education scene
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
         }
     }
 }
