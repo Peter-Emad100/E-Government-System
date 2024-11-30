@@ -12,6 +12,7 @@
     <content>
         <AnchorPane>
             <children>
+
                 <!-- Back Button -->
                 <Button layoutX="14.0" layoutY="14.0" onAction="#handleBackAction" prefHeight="0" prefWidth="70.0" text="←">
                     <font>
@@ -41,6 +42,12 @@
 
                     <!-- Add more images as needed -->
                 </VBox>
+                <!-- Top-Right Image -->
+                <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="490.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/education-logo.png" />
+                    </image>
+                </ImageView>
             </children>
         </AnchorPane>
     </content>

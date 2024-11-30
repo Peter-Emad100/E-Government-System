@@ -44,7 +44,7 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Load FXML file for the Ministry of Electricity layout
         try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("MinistryOfElectricity.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Education.fxml"));
             Pane root = (Pane) loader.load();
             // Create a scene and set the stage
             Scene scene = new Scene(root);
