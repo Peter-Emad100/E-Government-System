@@ -44,19 +44,19 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Load FXML file for the Ministry of Electricity layout
         try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("MinistryOfHealthAndPopulation.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("requestpage.fxml"));
             Pane root = (Pane) loader.load();
             // Create a scene and set the stage
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Ministry of HealthAndPopulation");
+            primaryStage.setTitle("E-government System");
             primaryStage.show();
             MinistryOfHealthAndPopulation healthMinistry = HealthMinistryDataTest.initializeHealthMinistry();
 
             // Access the controller if needed
-            MinistryOfHealthAndPopulationController controller = loader.getController();
+            RequestController controller = loader.getController();
             // You can call methods of the controller here if needed
-            controller.setMinistry(healthMinistry);
+            //controller.setMinistry(healthMinistry);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Failed to load FXML. Check the file path.");

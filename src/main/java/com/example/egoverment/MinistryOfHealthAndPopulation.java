@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MinistryOfHealthAndPopulation extends Ministry
 {
     private List<BloodBank> bloodBanks;
-    public MinistryOfHealthAndPopulation(String name, String id)
+    public MinistryOfHealthAndPopulation(String name, int id)
     {
         super(name, id);
         super.departments=new ArrayList<>();

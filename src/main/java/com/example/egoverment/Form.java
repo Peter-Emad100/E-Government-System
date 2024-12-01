@@ -1,5 +1,6 @@
 package com.example.egoverment;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -15,9 +16,9 @@ public class Form {
         return formName;
     }
 
-    public void addRequesttoForm(String Rname, String Rid , String Rnotices, String Rlocation, Date RbirthDate)
+    public void addRequesttoForm(String Rname, String Rid , String Rnotices, String Rlocation, LocalDate RbirthDate, boolean gender)
     {
-        requests.add(new Request(Rname, Rid, Rnotices, Rlocation, RbirthDate));
+        requests.add(new Request(Rname, Rid, Rnotices, Rlocation, RbirthDate, gender));
     }
 
     public int getFormId()

@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/BloodBag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/BloodBank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/BloodType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HealthMinistryDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MinistryOfHealthAndPopulation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MainMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MainMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/requestpage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AbstractCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AbstractCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HealthMinistryDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HealthMinistryDataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Minister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Minister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry_Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry_Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry_Interior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry_Interior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/OwnerCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/OwnerCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/UserCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/UserCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +51,12 @@
     &quot;assignee&quot;: &quot;Peter-Emad100&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Peter-Emad100/E-Government-System.git",
-    "accountId": "5b8ef263-d3c1-4319-9348-6fca427d7cd4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,
+    &quot;accountId&quot;: &quot;97b8d32c-7ea5-4416-bee9-71319843e022&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

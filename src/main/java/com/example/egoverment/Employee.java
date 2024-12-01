@@ -7,7 +7,7 @@ public class Employee extends Human{
     public LocalDate getStartingDate(){
         return startingDate;
     }
-    Employee(String name, String id){
+    Employee(String name, int id){
         super(name,id);
         startingDate=LocalDate.now();
     }

@@ -2,15 +2,15 @@ package com.example.egoverment;
 
 public abstract class Human {
     private String name;
-    private String id;
-    Human(String name,String id){
+    private int id;
+    Human(String name, int id){
         this.name=name;
         this.id=id;
     }
     public String getName(){
         return name;
     }
-    public String getId(){
+    public int getId(){
         return id;
     }
 }

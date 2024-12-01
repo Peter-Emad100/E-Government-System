@@ -22,7 +22,7 @@ public class Department {
     }
 
 
-    public void addEmployeetoDepartment(String empName, String empID)
+    public void addEmployeetoDepartment(String empName, int empID)
     {
         employees.add(new Employee(empName, empID));
     }
