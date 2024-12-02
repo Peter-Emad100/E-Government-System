@@ -10,21 +10,25 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Loginer_Controller">
    <children>
-      <Text layoutX="151.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" />
-      <Text layoutX="40.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username/Email:" />
-      <Text layoutX="40.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
-      <Button layoutX="156.0" layoutY="246.0" mnemonicParsing="false" onAction="#LoginAction" text="Login" />
-      <TextField fx:id="usernameField" layoutX="152.0" layoutY="126.0" />
-      <Text layoutX="55.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account yet?" />
-      <Button layoutX="226.0" layoutY="295.0" mnemonicParsing="false" onAction="#goToSignUp" text="Sign up now" />
-      <ImageView fitHeight="337.0" fitWidth="223.0" layoutX="347.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="407.0" fitWidth="606.0" layoutX="-2.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../3.jpg" />
+            <Image url="@assets/signup.jpg" />
          </image>
       </ImageView>
-      <PasswordField fx:id="passwordField" layoutX="152.0" layoutY="179.0" />
-      <Button fx:id="showPasswordButton" layoutX="236.0" layoutY="211.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" text="Show Password" />
-      <TextField fx:id="passwordVisibleField" layoutX="152.0" layoutY="179.0" />
+      <Text layoutX="252.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" />
+      <Text layoutX="82.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username/Email:" />
+      <Text layoutX="82.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Button layoutX="274.0" layoutY="253.0" mnemonicParsing="false" onAction="#LoginAction" text="Login" />
+      <TextField fx:id="usernameField" layoutX="222.0" layoutY="135.0" />
+      <Text layoutX="99.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account yet?" />
+      <Button layoutX="267.0" layoutY="315.0" mnemonicParsing="false" onAction="#goToSignUp" text="Sign up now" />
+      <PasswordField fx:id="passwordField" layoutX="222.0" layoutY="187.0" />
+      <TextField fx:id="passwordVisibleField" layoutX="222.0" layoutY="187.0" />
+      <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="350.0" layoutY="192.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/pass.png" />
+         </image>
+      </ImageView>
 
    </children>
 </AnchorPane>

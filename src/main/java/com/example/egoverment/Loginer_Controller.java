@@ -11,42 +11,45 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
+import java.io.InputStream;
 
 public class Loginer_Controller {
 
     @FXML
-    private TextField usernameField; // For Username/Email input
-
+    private TextField usernameField;
     @FXML
-    private PasswordField passwordField; // For Password input
-
+    private PasswordField passwordField;
     @FXML
-    private TextField passwordVisibleField; // For showing password (toggle field)
-
+    private TextField passwordVisibleField;
     @FXML
-    private Button showPasswordButton; // Show/Hide Password button
-
+    private Button showPasswordButton;
     @FXML
-    private Button loginButton; // Login button (optional, if needed for other purposes)
+    private Button loginButton;
+    @FXML
+    private ImageView eyeIcon;
 
-    // Initialize method to configure fields
     @FXML
     public void initialize() {
-        // Sync content between passwordField and passwordVisibleField
+        // Sync text between passwordField and passwordVisibleField
         passwordVisibleField.setManaged(false);
         passwordVisibleField.setVisible(false);
-
-        // Bind text between passwordField and passwordVisibleField
         passwordVisibleField.textProperty().bindBidirectional(passwordField.textProperty());
-    }
 
-    // Action method when login button is clicked
+        // Load eye icon for showing/hiding password
+        InputStream imageStream = getClass().getResourceAsStream("/pass.png");
+        if (imageStream == null) {
+            System.out.println("Image not found: pass.png");
+        } else {
+            eyeIcon.setImage(new Image(imageStream));
+        }
+    }
     @FXML
     public void LoginAction(ActionEvent actionEvent) {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        // Validate username
         if (username.isEmpty()) {
             showAlert("Invalid Username", "Username must not be empty.", AlertType.ERROR);
             return;
@@ -56,7 +59,6 @@ public class Loginer_Controller {
             return;
         }
 
-        // Validate password
         if (password.isEmpty()) {
             showAlert("Invalid Password", "Password must not be empty.", AlertType.ERROR);
             return;
@@ -73,28 +75,32 @@ public class Loginer_Controller {
             showAlert("Invalid Password", "Password must contain at least one special character.", AlertType.ERROR);
             return;
         }
-
-        // If all validations pass, proceed with further actions (e.g., authentication)
         showAlert("Success", "Login Successful!", AlertType.INFORMATION);
     }
 
-    // Action method for toggling password visibility
     @FXML
-    public void togglePasswordVisibility(ActionEvent actionEvent) {
+    private void togglePasswordVisibility() {
         if (passwordVisibleField.isVisible()) {
             // Switch to PasswordField
             passwordVisibleField.setVisible(false);
             passwordVisibleField.setManaged(false);
             passwordField.setVisible(true);
             passwordField.setManaged(true);
-            showPasswordButton.setText("Show Password");
+
+            // (show password)
+            InputStream imageStream = getClass().getResourceAsStream("/pass.png");
+            eyeIcon.setImage(new Image(imageStream));
         } else {
             // Switch to TextField
             passwordField.setVisible(false);
             passwordField.setManaged(false);
             passwordVisibleField.setVisible(true);
             passwordVisibleField.setManaged(true);
-            showPasswordButton.setText("Hide Password");
+
+            // (hide password)
+            InputStream imageStream = getClass().getResourceAsStream("pass.png");
+                eyeIcon.setImage(new Image(imageStream));
+
         }
     }
 
@@ -106,26 +112,25 @@ public class Loginer_Controller {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
     @FXML
     private void goToSignUp() {
         try {
-            // Load the SignUp FXML file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
             AnchorPane signUpPage = loader.load();
 
-            // Get the SignUp controller (optional)
             SignUp_Controller signUpController = loader.getController();
 
-            // Create a new stage (window) for the SignUp page
             Stage signUpStage = new Stage();
             signUpStage.setTitle("Sign Up");
             signUpStage.setScene(new Scene(signUpPage));
 
-            // Show the SignUp window
             signUpStage.show();
+
+            Stage currentStage = (Stage) usernameField.getScene().getWindow();
+            currentStage.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 }
