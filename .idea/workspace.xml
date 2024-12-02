@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Loginer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/SignUp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/ExchangeRate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/FinanceMinistryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/FinanceMinistry.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -42,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,
-    &quot;accountId&quot;: &quot;0d1d0e14-f1c0-48b0-ba75-b8dee3c2f1a2&quot;
+    &quot;accountId&quot;: &quot;e9ca0d9a-bc12-4296-a92a-473570cabc6c&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -70,14 +66,13 @@
     &quot;Application.Ministry_Tourism.executor&quot;: &quot;Run&quot;,
     &quot;Application.Ministry_of_Tourism.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/java/com/example/egoverment&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tabarak/Desktop/New folder (6)/E-Government-System&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/resources/com/example/egoverment&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
 }</component>
   <component name="RecentsManager">

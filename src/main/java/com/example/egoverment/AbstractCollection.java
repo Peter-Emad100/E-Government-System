@@ -17,9 +17,9 @@ public abstract class AbstractCollection<T extends Loginer> {
         }
         return null;
     }
-    public T idSearch(String id) {
+    public T idSearch(int id) {
         for (T subLoginer : subLoginers) {
-            if (subLoginer.getId().equals(id)) {
+            if (subLoginer.getId() == id) {
                 return subLoginer;
             }
         }

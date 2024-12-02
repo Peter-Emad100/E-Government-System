@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Ministry_Education extends Ministry {
 
 
-    public Ministry_Education(String name, String id) {
+    public Ministry_Education(String name, int id) {
 
             super(name, id);
             super.departments=new ArrayList<>();

@@ -1,21 +1,24 @@
 package com.example.egoverment;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Request {
 
     private String notices;
     private String location;
-    private Date birthDate;
+    private LocalDate birthDate;
     private String id;
     private String name;
+    private boolean gender;
 
-    public Request(String name,String id ,String notices, String location,Date birthDate){
+    public Request(String name, String id ,String notices, String location, LocalDate birthDate, boolean gender){
         this.name=name;
         this.id=id;
         this.birthDate=birthDate;
         this.location=location;
         this.notices=notices;
+        this.gender=gender;
     }
 
     public String getId() {
@@ -26,7 +29,7 @@ public class Request {
         return location;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 

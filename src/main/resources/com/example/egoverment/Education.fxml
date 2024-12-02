@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Education_Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.egoverment.Education_Controller">
     <children>
-        <!-- Primary Stage Button -->
-        <Button layoutX="199.0" layoutY="82.0" mnemonicParsing="false" onAction="#showPrimaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Primary Stage" />
+        <!-- Background Image -->
+        <ImageView fx:id="backgroundImage" pickOnBounds="true" preserveRatio="False">
+            <image>
+                <Image url="@assets/whiteblue-back.jpg" />
+            </image>
+        </ImageView>
 
         <!-- Text label -->
         <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check last year's exam:" wrappingWidth="313.4700622558594">
@@ -17,11 +23,20 @@
             </font>
         </Text>
 
+        <!-- Primary Stage Button -->
+        <Button layoutX="199.0" layoutY="82.0" mnemonicParsing="false" onAction="#showPrimaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Primary Stage" />
+
         <!-- Preparatory Stage Button -->
         <Button layoutX="199.0" layoutY="193.0" mnemonicParsing="false" onAction="#showPreparatoryStageImage" prefHeight="44.0" prefWidth="157.0" text="Preparatory Stage" />
 
         <!-- Secondary Stage Button -->
-        <Button layoutX="199.0" layoutY="311.0" mnemonicParsing="false" onAction="#showSecondaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Secondary stage" />
+        <Button layoutX="199.0" layoutY="311.0" mnemonicParsing="false" onAction="#showSecondaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Secondary Stage" />
+
+        <!-- Top-Right Image -->
+        <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="490.0"  layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/education-logo.png" />
+            </image>
+        </ImageView>
     </children>
 </AnchorPane>
-
