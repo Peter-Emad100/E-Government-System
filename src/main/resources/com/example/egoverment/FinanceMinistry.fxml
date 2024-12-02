@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.FinanceMinistryController">
+   <children>
+      <Label fx:id="dataLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="44.0" prefHeight="522.0" prefWidth="624.0" text="error" textAlignment="JUSTIFY">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
