@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/ExchangeRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/FinanceMinistryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/FinanceMinistry.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
