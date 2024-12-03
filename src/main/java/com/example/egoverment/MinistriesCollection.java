@@ -2,8 +2,8 @@ package com.example.egoverment;
 import java.util.ArrayList;
 
 public class  MinistriesCollection {
-    static int i=0;
-    static ArrayList<Ministry> minis = new ArrayList<Ministry>();
+    private static int i=0;
+    private static ArrayList<Ministry> minis = new ArrayList<Ministry>();
     static{
         minis.add(new Ministry("Ministry of Interior",i++));
         minis.add(new Ministry("Ministry of Education",i++));
