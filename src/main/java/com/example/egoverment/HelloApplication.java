@@ -32,7 +32,7 @@ public class HelloApplication extends Application {
 //    }
 
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Loginer.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MinistryOfHealthAndPopulation.fxml"));
         primaryStage.setTitle("Welcome!");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
