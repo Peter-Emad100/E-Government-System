@@ -9,6 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Education_Controller">
     <children>
+
         <!-- Background Image -->
         <ImageView fx:id="backgroundImage" fitHeight="507.0" fitWidth="721.0" layoutX="-14.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="False">
             <image>

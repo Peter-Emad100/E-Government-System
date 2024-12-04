@@ -11,9 +11,13 @@ public class  MinistriesCollection {
         minis.add(new Ministry("Ministry of Transportation",i++));
         //minis.add(new MinistryOfElectricity("Ministry Electricity and Energy",i++));
         minis.add(new MinistryOfHealthAndPopulation("Ministry of Health and population",i++));
+
     };
     public static void add(String name){
         minis.add(new Ministry(name,i++));
+    }
+    public static ArrayList<Ministry> getMinistries() {
+        return minis;
     }
 
 }
