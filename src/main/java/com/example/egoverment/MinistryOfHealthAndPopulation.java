@@ -10,8 +10,8 @@ public class MinistryOfHealthAndPopulation extends Ministry
     {
         super(name, id);
         super.departments=new ArrayList<>();
-        super.addDepartmentsToMinistry("Department of Blood Banks", 1);
-        super.departments.get(0).addFormtoDepartment("Search For Blood Banks", 1);
+        super.addDepartmentsToMinistry("Department of Blood Banks");
+        super.departments.get(0).addFormtoDepartment("Search For Blood Banks");
         this.bloodBanks = new ArrayList<>();
     }
     public void addBloodBank(String location, List<BloodBag> bloodBags) {

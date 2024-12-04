@@ -9,8 +9,8 @@ public class Ministry_Interior extends Ministry {
     {
         super(name, id);
         super.departments=new ArrayList<>();
-        super.addDepartmentsToMinistry("Department of Civil Status", 1);
-        super.departments.get(0).addFormtoDepartment("Renew Social Security Number", 1);
+        super.addDepartmentsToMinistry("Department of Civil Status");
+        super.departments.get(0).addFormtoDepartment("Renew Social Security Number");
 
     }
 

@@ -9,9 +9,9 @@ public class Ministry_Education extends Ministry {
 
             super(name, id);
             super.departments=new ArrayList<>();
-            super.addDepartmentsToMinistry("Department of Primary Stage", 4);
-            super.addDepartmentsToMinistry("Department of Preparatory Stage", 5);
-            super.addDepartmentsToMinistry("Department of Secondary Stage", 6);
+            super.addDepartmentsToMinistry("Department of Primary Stage");
+            super.addDepartmentsToMinistry("Department of Preparatory Stage");
+            super.addDepartmentsToMinistry("Department of Secondary Stage");
 
     }
 }

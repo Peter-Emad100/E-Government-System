@@ -3,18 +3,24 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
+import java.time.LocalDate;
+
 public class RequestController {
     Ministry ministries[]=new Ministry[2];
     public void initialize()
     {
         ministries[0] = new Ministry("Ministry of Interior", 0);
-        ministries[0].departments.add(new Department("Department of Civil Status", 0));
-        ministries[0].departments.add(new Department("Department of passports and immigration", 1));
-        ministries[0].departments.get(0).forms.add(new Form("Changing SSN", 0));
+        ministries[0].departments.add(new Department("Department of Civil Status"));
+        ministries[0].departments.add(new Department("Department of passports and immigration"));
+        ministries[0].departments.get(0).forms.add(new Form("Changing SSN"));
         ministries[1]=new Ministry("Ministry of health", 1);
-        ministries[1].departments.add(new Department("health", 0));
+        ministries[1].departments.add(new Department("health"));
 
     }
+    private String Formname="Changing SSN";
+
+    private int lengthofArrRequest;
+
     @FXML
     private Label outputLabel;
 
@@ -50,6 +56,25 @@ public class RequestController {
 
     private boolean gendertype;
 
+    private void showAlert(String title, String message, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void returnToOriginal()
+    {
+        gender.selectToggle(null);
+        birthdateField.setValue(null);
+        nameField.setText(null);
+        idField.setText(null);
+        commentsField.setText(null);
+        addressField.setText(null);
+    }
+
+
     @FXML
     void SubmitRequest(MouseEvent event) {
 
@@ -75,24 +100,19 @@ public class RequestController {
                 && idField.getText() != null && !idField.getText().trim().isEmpty()
                 && birthdateField.getValue() != null)
         {
-            ministries[0].departments.get(0).forms.get(0).requests.add(new Request(nameField.getText(), idField.getText(),
-                    commentsField.getText(), addressField.getText(), birthdateField.getValue(), gendertype));
-            System.out.println("heloooo");
+            RequestCollection.addrequest(Formname, nameField.getText(), idField.getText(),
+                    commentsField.getText(), addressField.getText(), birthdateField.getValue(), gendertype);
 
+
+            showAlert("Message", "Request submitted successfully", Alert.AlertType.CONFIRMATION);
+            returnToOriginal();
+
+
+        }else {
+            showAlert("Alert", "Can't submit request, please fill all fields", Alert.AlertType.ERROR);
+            returnToOriginal();
         }
 
-
-        System.out.println(ministries[0].departments.get(0).forms.get(0).requests.get(0).getBirthDate() +" "+
-                ministries[0].departments.get(0).forms.get(0).requests.get(0).getId()+ " "+
-                ministries[0].departments.get(0).forms.get(0).requests.get(0).getLocation()+ " "+
-                ministries[0].departments.get(0).forms.get(0).requests.get(0).getName()+ " "+
-                ministries[0].departments.get(0).forms.get(0).requests.get(0).getNotices());
-
-
     }
-
-
-
-
 
 }

@@ -3,13 +3,11 @@ package com.example.egoverment;
 import java.util.ArrayList;
 public class Department {
     private String departmentName;
-    private int departmentID;
     private ArrayList<Employee> employees;
     ArrayList<Form> forms;
 
-    public Department(String departmentName, int departmentID){
+    public Department(String departmentName){
         this.departmentName=departmentName;
-        this.departmentID=departmentID;
         employees=new ArrayList<Employee>();
         forms=new ArrayList<Form>();
     }
@@ -17,17 +15,13 @@ public class Department {
         return departmentName;
     }
 
-    public int getDepartmentID(){
-        return departmentID;
-    }
-
-
     public void addEmployeetoDepartment(String empName, int empID)
     {
         employees.add(new Employee(empName, empID));
     }
-    public void addFormtoDepartment(String formName, int formId)
+
+    public void addFormtoDepartment(String formName)
     {
-        forms.add(new Form(formName, formId));
+        forms.add(new Form(formName));
     }
 }

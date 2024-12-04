@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Request {
 
+    private String formName;
     private String notices;
     private String location;
     private LocalDate birthDate;
@@ -12,7 +13,8 @@ public class Request {
     private String name;
     private boolean gender;
 
-    public Request(String name, String id ,String notices, String location, LocalDate birthDate, boolean gender){
+    public Request(String formName, String name, String id ,String notices, String location, LocalDate birthDate, boolean gender){
+        this.formName=formName;
         this.name=name;
         this.id=id;
         this.birthDate=birthDate;
@@ -40,5 +42,9 @@ public class Request {
     public String getNotices() {
         return notices;
     }
+
+    public String getFormName() { return formName; }
+
+    public boolean getGender() { return gender; }
 }
 
