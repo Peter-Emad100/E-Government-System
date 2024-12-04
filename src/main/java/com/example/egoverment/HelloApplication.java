@@ -1,3 +1,4 @@
+/*
 package com.example.egoverment;
 
 import javafx.application.Application;
@@ -50,3 +51,34 @@ public class HelloApplication extends Application {
 //        );
     }
 }
+*/
+package com.example.egoverment;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class HelloApplication extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            // Load the Add Employee FXML
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Add_Employee.fxml"));
+            Scene scene = new Scene(loader.load(), 700, 500);
+
+            // Set up the stage
+            primaryStage.setTitle("Employee Management");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+

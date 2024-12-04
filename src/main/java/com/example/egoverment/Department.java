@@ -15,11 +15,12 @@ public class Department {
         return departmentName;
     }
 
-    public void addEmployeetoDepartment(String empName, int empID)
-    {
-        employees.add(new Employee(empName, empID));
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
     }
-
+    public boolean removeEmployee(int employeeId) {
+        return employees.removeIf(emp -> emp.getId() == employeeId);
+    }
     public void addFormtoDepartment(String formName)
     {
         forms.add(new Form(formName));

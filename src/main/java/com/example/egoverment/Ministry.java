@@ -14,6 +14,7 @@ public class Ministry {
     }
     public Minister getMinster() {
         return minister;
+
     }
 
     public void addDepartmentsToMinistry(String DeptName) {

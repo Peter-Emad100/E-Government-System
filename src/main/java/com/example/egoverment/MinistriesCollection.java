@@ -13,6 +13,21 @@ public class  MinistriesCollection {
         minis.add(new MinistryOfHealthAndPopulation("Ministry of Health and population",i++));
 
     };
+    private static ArrayList<Department> dep =new ArrayList<>();
+    static {
+        dep.add(new Department("department of national budget"));
+        dep.add(new Department("department of treasury operations"));
+        dep.add(new Department("department of information technology management"));
+
+    }
+    public static Department findDepartmentByName(String name) {
+        for (Department departments : dep) {
+            if (departments.getDepartmentName ().equalsIgnoreCase(name)) {
+                return departments;
+            }
+        }
+        return null;
+    }
     public static void add(String name){
         minis.add(new Ministry(name,i++));
     }
