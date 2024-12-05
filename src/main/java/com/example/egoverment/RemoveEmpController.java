@@ -17,7 +17,7 @@ public class RemoveEmpController {
         @FXML
         private TextField empid;
 
-    public void removeEmployee() {
+    /*public void removeEmployee() {
         String departmentName = depname.getText();
         int employeeId;
 
@@ -46,7 +46,7 @@ public class RemoveEmpController {
         alert.setTitle(title);
         alert.setContentText(content);
         alert.showAndWait();
-    }
+    }*/
 }
 
 

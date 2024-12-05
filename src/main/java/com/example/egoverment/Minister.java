@@ -1,12 +1,12 @@
 package com.example.egoverment;
 import java.time.LocalDate;
 public class Minister extends Human{
-    private LocalDate startingDate;
+    private String  startingDate;
     Minister(String name, int id){
         super(name,id);
-        startingDate=LocalDate.now();
+        startingDate=LocalDate.now().toString();
     }
-    public LocalDate getStartingDate(){
+    public String getStartingDate(){
         return startingDate;
     }
 }

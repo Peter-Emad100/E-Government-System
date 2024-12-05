@@ -100,8 +100,8 @@ public class RequestController {
                 && idField.getText() != null && !idField.getText().trim().isEmpty()
                 && birthdateField.getValue() != null)
         {
-            RequestCollection.addrequest(Formname, nameField.getText(), idField.getText(),
-                    commentsField.getText(), addressField.getText(), birthdateField.getValue(), gendertype);
+            RequestCollection.addRequest(Formname, nameField.getText(), idField.getText(),
+                    commentsField.getText(), addressField.getText(),birthdateField.getValue().toString(), gendertype);
 
 
             showAlert("Message", "Request submitted successfully", Alert.AlertType.CONFIRMATION);

@@ -1,0 +1,58 @@
+{
+  "ministries": [
+    {
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ministry of Interior",
+        "id": 0.0
+      },
+      "departments": []
+    },
+    {
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ministry of Education",
+        "id": 1.0
+      },
+      "departments": []
+    },
+    {
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ministry of Finance",
+        "id": 2.0
+      },
+      "departments": []
+    },
+    {
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ministry of Transportation",
+        "id": 3.0
+      },
+      "departments": []
+    },
+    {
+      "bloodBanks": [],
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ministry of Health and population",
+        "id": 4.0
+      },
+      "departments": [
+        {
+          "departmentName": "Department of Blood Banks",
+          "employees": [],
+          "forms": [
+            {
+              "formName": "Search For Blood Banks"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [],
+  "owners": [],
+  "users": []
+}

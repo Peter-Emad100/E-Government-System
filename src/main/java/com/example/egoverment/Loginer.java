@@ -5,8 +5,8 @@ public class Loginer extends Human {
     private String loginName;
     private String Password;
 
-    public Loginer(String name, String id, String loginName, String Password) {
-        super(name, Integer.parseInt(id));
+    public Loginer(String name, int id, String loginName, String Password) {
+        super(name, id);
         this.loginName = loginName;
         this.Password = Password;
 

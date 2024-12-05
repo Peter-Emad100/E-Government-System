@@ -1,7 +1,8 @@
 package com.example.egoverment;
 
 import java.util.ArrayList;
-public abstract class AbstractCollection<T extends Loginer> {
+
+public class GenericLoginerCollec<T extends Loginer> {
     protected ArrayList<T> subLoginers= new ArrayList<T>();
 
     public T searchForLogin(String name, String Password) {
@@ -25,5 +26,4 @@ public abstract class AbstractCollection<T extends Loginer> {
         }
         return null;
     }
-
 }

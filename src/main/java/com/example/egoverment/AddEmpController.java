@@ -18,7 +18,7 @@ public class AddEmpController{
 
     @FXML
     private TextField empname;
-    public void addEmployee() {
+   /* public void addEmployee() {
         String departmentName = depname.getText();
         String employeeName = empname.getText();
         int employeeId = Integer.parseInt(empid.getText());
@@ -32,7 +32,7 @@ public class AddEmpController{
         //add employee
         department.addEmployee(new Employee(employeeName,employeeId));
         showAlert("Success", "Employee added successfully to " + departmentName);
-    }
+    }*/
 
 
     private void showAlert(String title, String content) {

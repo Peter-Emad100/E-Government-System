@@ -1,10 +1,25 @@
 package com.example.egoverment;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonArray;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.io.FileWriter;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
 
+import java.lang.reflect.Type;
 public class  MinistriesCollection {
-    private static int i=0;
+    private static int i = 0;
+    private final static String savingName="ministries";
     private static ArrayList<Ministry> minis = new ArrayList<Ministry>();
-    static{
+
+    /*static{
         minis.add(new Ministry("Ministry of Interior",i++));
         minis.add(new Ministry("Ministry of Education",i++));
         minis.add(new Ministry("Ministry of Finance",i++));
@@ -12,8 +27,8 @@ public class  MinistriesCollection {
         //minis.add(new MinistryOfElectricity("Ministry Electricity and Energy",i++));
         minis.add(new MinistryOfHealthAndPopulation("Ministry of Health and population",i++));
 
-    };
-    private static ArrayList<Department> dep =new ArrayList<>();
+    };*/
+    /*private static ArrayList<Department> dep =new ArrayList<>();
     static {
         dep.add(new Department("department of national budget"));
         dep.add(new Department("department of treasury operations"));
@@ -27,12 +42,19 @@ public class  MinistriesCollection {
             }
         }
         return null;
-    }
-    public static void add(String name){
-        minis.add(new Ministry(name,i++));
-    }
-    public static ArrayList<Ministry> getMinistries() {
-        return minis;
-    }
+    }*/
 
+        public static void add (String name){
+            minis.add(new Ministry(name, i++));
+        }
+        public static void prepareToSave () {
+            FileHelper.prepareToSave(minis, savingName);
+        }
+        public static void retrieve () {
+            minis = FileHelper.retrieve(minis, savingName);
+        }
+        public static ArrayList<Ministry> getMinistries () {
+            return minis;
+
+    }
 }

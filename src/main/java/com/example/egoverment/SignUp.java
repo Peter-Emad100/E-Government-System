@@ -6,7 +6,7 @@ public class SignUp extends Loginer{
     private int mobileNum;
     private String address;
 
-    SignUp(String name, String id, String loginName, String Password, int mobileNum, String address) {
+    SignUp(String name,int id, String loginName, String Password, int mobileNum, String address) {
         super(name, id, loginName, Password);
         this.mobileNum = mobileNum;
         this.address = address;

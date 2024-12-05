@@ -1,4 +1,3 @@
-/*
 package com.example.egoverment;
 
 import javafx.application.Application;
@@ -12,7 +11,7 @@ public class HelloApplication extends Application {
    @Override
     public void start(Stage primaryStage) throws Exception {
       try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("User_MainMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Education.fxml"));
            Pane root = (Pane) loader.load();
            //Create a scene and set the stage
             Scene scene = new Scene(root);
@@ -21,7 +20,7 @@ public class HelloApplication extends Application {
            primaryStage.show();
 
            //Access the controller if needed
-           FinanceMinistryController controller = loader.getController();
+           Education_Controller controller = loader.getController();
       } catch (Exception e) {
            e.printStackTrace();
            System.out.println("Failed to load FXML. Check the file path.");
@@ -39,46 +38,8 @@ public class HelloApplication extends Application {
 //        primaryStage.show();
 //    }
     public static void main (String[] args){
-        launch(args);
-//        int lengthofArrRequest=RequestCollection.requests.size() - 1;
-//        System.out.println(RequestCollection.requests.get(lengthofArrRequest).getBirthDate() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getNotices() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getId() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getLocation() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getName() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getGender() + " " +
-//                RequestCollection.requests.get(lengthofArrRequest).getFormName()
-//        );
+       FileHelper.retrieveAll();
+       launch(args);
+       FileHelper.saveAll();
     }
 }
-*/
-package com.example.egoverment;
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-public class HelloApplication extends Application {
-
-    @Override
-    public void start(Stage primaryStage) {
-        try {
-            // Load the Add Employee FXML
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Add_Employee.fxml"));
-            Scene scene = new Scene(loader.load(), 700, 500);
-
-            // Set up the stage
-            primaryStage.setTitle("Employee Management");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
-
