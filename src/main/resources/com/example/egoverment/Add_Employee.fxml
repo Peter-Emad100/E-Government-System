@@ -15,12 +15,12 @@
             <Image url="@assets/pngtree-cream-colored.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="593.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="619.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assets/nesr.jpg" />
+            <Image url="@assets/nesr2.png" />
          </image>
       </ImageView>
-      <Label layoutX="37.0" layoutY="33.0" text="Add Employee" underline="true">
+      <Label layoutX="205.0" layoutY="27.0" text="Add Employee:" underline="true">
          <font>
             <Font name="Bodoni MT Bold" size="48.0" />
          </font>
@@ -37,12 +37,13 @@
       </Label>
       <TextField fx:id="empid" layoutX="298.0" layoutY="231.0" prefHeight="36.0" prefWidth="291.0" />
       <TextField fx:id="empname" layoutX="298.0" layoutY="147.0" prefHeight="36.0" prefWidth="291.0" />
-      <Button fx:id="AddMinistryButton" onAction="#addEmployee" layoutX="256.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="188.0" text="Add Employee" />
+      <Button fx:id="AddMinistryButton" layoutX="256.0" layoutY="393.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="30.0" prefWidth="188.0" text="Add Employee" />
       <Label layoutX="28.0" layoutY="312.0" text="Enter Departments name:">
          <font>
             <Font name="Bell MT" size="24.0" />
          </font>
       </Label>
       <TextField fx:id="depname" layoutX="298.0" layoutY="309.0" prefHeight="36.0" prefWidth="291.0" />
+      <Button layoutX="37.0" layoutY="44.0" mnemonicParsing="false" text="←" />
    </children>
 </AnchorPane>

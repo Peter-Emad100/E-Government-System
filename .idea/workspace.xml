@@ -5,28 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
-      <change afterPath="$PROJECT_DIR$/json.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/FileHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/GenericLoginerCollec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AbstractCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Minister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Minister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistriesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistriesCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/OwnerCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/OwnerCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RemoveEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RemoveEmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/UserCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/UserCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Add_Employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Add_Employee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Loginer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Loginer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MinistryOfHealthAndPopulation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MinistryOfHealthAndPopulation.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
