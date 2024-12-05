@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class HealthMinistryDataTest {
     public static MinistryOfHealthAndPopulation initializeHealthMinistry() {
 
-        MinistryOfHealthAndPopulation healthMinistry = new MinistryOfHealthAndPopulation("Ministry of Health And Population", 77);
+        MinistryOfHealthAndPopulation healthMinistry = new MinistryOfHealthAndPopulation("Ministry of Health And Population");
 
 
         BloodBag bag1 = new BloodBag(BloodType.A_POS, 10);

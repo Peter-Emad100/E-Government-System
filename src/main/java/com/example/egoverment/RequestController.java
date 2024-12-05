@@ -9,11 +9,11 @@ public class RequestController {
     Ministry ministries[]=new Ministry[2];
     public void initialize()
     {
-        ministries[0] = new Ministry("Ministry of Interior", 0);
+        ministries[0] = new Ministry("Ministry of Interior");
         ministries[0].departments.add(new Department("Department of Civil Status"));
         ministries[0].departments.add(new Department("Department of passports and immigration"));
         ministries[0].departments.get(0).forms.add(new Form("Changing SSN"));
-        ministries[1]=new Ministry("Ministry of health", 1);
+        ministries[1]=new Ministry("Ministry of health");
         ministries[1].departments.add(new Department("health"));
 
     }

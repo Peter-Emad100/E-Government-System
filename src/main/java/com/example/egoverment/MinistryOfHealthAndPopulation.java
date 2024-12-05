@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public class MinistryOfHealthAndPopulation extends Ministry
 {
     private List<BloodBank> bloodBanks;
-    public MinistryOfHealthAndPopulation(String name, int id)
+    public MinistryOfHealthAndPopulation(String name)
     {
-        super(name, id);
+        super(name);
         super.departments=new ArrayList<>();
         super.addDepartmentsToMinistry("Department of Blood Banks");
         super.departments.get(0).addFormtoDepartment("Search For Blood Banks");

@@ -45,7 +45,7 @@ public class  MinistriesCollection {
     }*/
 
         public static void add (String name){
-            minis.add(new Ministry(name, i++));
+            minis.add(new Ministry(name));
         }
         public static void prepareToSave () {
             FileHelper.prepareToSave(minis, savingName);
