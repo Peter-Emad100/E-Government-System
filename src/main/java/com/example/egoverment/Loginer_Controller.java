@@ -38,9 +38,9 @@ public class Loginer_Controller {
         passwordVisibleField.textProperty().bindBidirectional(passwordField.textProperty());
 
         // Load eye icon for showing/hiding password
-        InputStream imageStream = getClass().getResourceAsStream("/pass.png");
+        InputStream imageStream = getClass().getResourceAsStream("assets/pass.jpg");
         if (imageStream == null) {
-            System.out.println("Image not found: pass.png");
+            System.out.println("Image not found: pass.jpg");
         } else {
             eyeIcon.setImage(new Image(imageStream));
         }
@@ -88,7 +88,7 @@ public class Loginer_Controller {
             passwordField.setManaged(true);
 
             // (show password)
-            InputStream imageStream = getClass().getResourceAsStream("/pass.png");
+            InputStream imageStream = getClass().getResourceAsStream("assets/pass.jpg");
             eyeIcon.setImage(new Image(imageStream));
         } else {
             // Switch to TextField
@@ -98,7 +98,7 @@ public class Loginer_Controller {
             passwordVisibleField.setManaged(true);
 
             // (hide password)
-            InputStream imageStream = getClass().getResourceAsStream("pass.png");
+            InputStream imageStream = getClass().getResourceAsStream("assets/pass.jpg");
                 eyeIcon.setImage(new Image(imageStream));
 
         }

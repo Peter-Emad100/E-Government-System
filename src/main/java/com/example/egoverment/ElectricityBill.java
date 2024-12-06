@@ -11,6 +11,7 @@ public class ElectricityBill {
     private final int billID;
     private final LocalDate dueDate;
     private final double amount;
+    private String PayerUsername;
 
     public ElectricityBill() {
         BillNo += 1; // counts the number of bills made

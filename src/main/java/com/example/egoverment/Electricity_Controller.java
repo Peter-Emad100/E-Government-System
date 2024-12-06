@@ -51,11 +51,6 @@ public class Electricity_Controller {
 //        });
 //    }
 
-    @FXML
-    private void handleLogout() {
-        showAlert("Logout", "You have successfully logged out.");
-    }
-
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);

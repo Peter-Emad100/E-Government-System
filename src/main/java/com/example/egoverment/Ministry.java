@@ -13,6 +13,7 @@ public class Ministry {
         departments=new ArrayList<Department>();
         ministryName=name;
 
+
     }
     public Minister getMinster() {
         return minister;
