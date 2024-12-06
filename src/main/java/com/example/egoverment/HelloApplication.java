@@ -23,7 +23,8 @@ public class HelloApplication extends Application {
            primaryStage.show();
 
            //Access the controller if needed
-           Loginer_Controller controller = loader.getController();
+//           Loginer_Controller controller = loader.getController();
+          AddMinistryController controller = (AddMinistryController) loader.getController();
       } catch (Exception e) {
            e.printStackTrace();
            System.out.println("Failed to load FXML. Check the file path.");

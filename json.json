@@ -72,6 +72,10 @@
         "id": 2
       },
       "departments": []
+    },
+    {
+      "ministryName": "norhan",
+      "departments": []
     }
   ],
   "requests": [],
