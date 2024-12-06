@@ -23,21 +23,21 @@
       <Text layoutX="128.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up/Register" />
       <Text layoutX="50.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
       <Text layoutX="36.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National ID:" />
-      <Text layoutX="46.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+      <Text layoutX="52.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text layoutX="24.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number:" />
-      <Text layoutX="23.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username/Email:" />
+      <Text layoutX="39.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
       <Text layoutX="41.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
       <Text layoutX="17.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-write Password:" />
       <Button layoutX="128.0" layoutY="336.0" mnemonicParsing="false" onAction="#SignUpAction" text="Sign Up" />
-      <TextField fx:id="nameField" layoutX="113.0" layoutY="93.0" />
-      <TextField fx:id="idField" layoutX="113.0" layoutY="124.0" />
-      <TextField fx:id="addressField" layoutX="113.0" layoutY="150.0" />
-      <TextField fx:id="mobileField" layoutX="119.0" layoutY="179.0" />
-      <TextField fx:id="userField" layoutX="119.0" layoutY="207.0" />
-      <PasswordField fx:id="passwordField" layoutX="119.0" layoutY="242.0" />
+      <TextField fx:id="nameField" layoutX="128.0" layoutY="93.0" />
+      <TextField fx:id="idField" layoutX="128.0" layoutY="124.0" />
+      <TextField fx:id="emailField" layoutX="128.0" layoutY="150.0" />
+      <TextField fx:id="mobileField" layoutX="128.0" layoutY="179.0" />
+      <TextField fx:id="userField" layoutX="128.0" layoutY="207.0" />
+      <PasswordField fx:id="passwordField" layoutX="128.0" layoutY="242.0" />
       <PasswordField fx:id="rewritePasswordField" layoutX="128.0" layoutY="271.0" />
       <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoBack" text="Back Button" />
-      <TextField fx:id="passwordVisibleField" layoutX="119.0" layoutY="242.0" />
+      <TextField fx:id="passwordVisibleField" layoutX="128.0" layoutY="242.0" />
       <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="234.0" layoutY="245.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/pass.png" />

@@ -2,7 +2,7 @@ package com.example.egoverment;
 
 import javafx.event.ActionEvent;
 
-public class SignUp extends Loginer{
+/*public class SignUp extends Loginer{
     private int mobileNum;
     private String address;
 
@@ -37,7 +37,7 @@ public class SignUp extends Loginer{
         }
     }
 
-    /* Method to complete the user registration by validating all fields */
+    /* Method to complete the user registration by validating all fields *//*
     public void registerUser(String name, String id, String loginName, String password, int mobileNum, String address) {
         setLoginName(loginName);
         setPassword(password);
@@ -51,5 +51,5 @@ public class SignUp extends Loginer{
         }
     }
 
-}
+}*/
 

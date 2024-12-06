@@ -5,18 +5,14 @@ import java.util.ArrayList;
 public class GenericLoginerCollec<T extends Loginer> {
     protected ArrayList<T> subLoginers= new ArrayList<T>();
 
-    public T searchForLogin(String name, String Password) {
+    public boolean searchForLogin(String mail, String Password) {
         for (T subLoginer : subLoginers) {
-            if (subLoginer.getLoginName().equals(name)) {
-                if (subLoginer.getPassword().equals(Password)) {
-                    return subLoginer;
-                } else {
-                    return null;
-                }
+            if (subLoginer.getMail().equals(mail)) {
+                return subLoginer.getPassword().equals(Password);
             }
 
         }
-        return null;
+        return false;
     }
     public T idSearch(int id) {
         for (T subLoginer : subLoginers) {

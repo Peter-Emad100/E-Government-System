@@ -22,7 +22,7 @@ public class SignUp_Controller {
     @FXML
     private TextField idField;
     @FXML
-    private TextField addressField;
+    private TextField emailField;
     @FXML
     private TextField mobileField;
     @FXML
@@ -52,15 +52,19 @@ public class SignUp_Controller {
 
     @FXML
     private void SignUpAction() {
+        long nationalId=0;
         String name = nameField.getText();
-        String nationalId = idField.getText();
-        String address = addressField.getText();
+         try{nationalId =Long.parseLong(idField.getText());}
+        catch (Exception e){
+             System.out.println(e);
+        }
+        String mail = emailField.getText();
         String mobileNumber = mobileField.getText();
         String username = userField.getText();
         String password = passwordField.getText();
         String reWritePassword = rewritePasswordField.getText();
 
-        if (name.isEmpty() || nationalId.isEmpty() || address.isEmpty() ||
+        if (name.isEmpty() || nationalId==0 || mail.isEmpty() ||
                 mobileNumber.isEmpty() || username.isEmpty() || password.isEmpty() || reWritePassword.isEmpty()) {
             showAlert("Error", "All fields must be filled out!", Alert.AlertType.ERROR);
         } else if (!password.equals(reWritePassword)) {
@@ -69,12 +73,13 @@ public class SignUp_Controller {
             showAlert("Error", "Mobile number must have 11 digits and start with 0 and 1.", Alert.AlertType.ERROR);
         } else if (!isValidNationalId(nationalId)) {
             showAlert("Error", "National ID must have 14 digits.", Alert.AlertType.ERROR);
-        } else if (!isValidUsername(username)) {
-            showAlert("Error", "Username must contain @gmail.com.", Alert.AlertType.ERROR);
+        } else if (!isValidMail(mail)) {
+            showAlert("Error", "mail must contain @ && .com.", Alert.AlertType.ERROR);
         } else if (!isValidPassword(password)) {
             showAlert("Error", "Password must be at least 8 characters long, contain a symbol, and a number.", Alert.AlertType.ERROR);
         } else {
             // Proceed with sign-up logic (e.g., saving data or interacting with a database)
+            UserCollection.add(name,nationalId,username,password,mobileNumber,mail);
             showAlert("Success", "You have signed up successfully!", Alert.AlertType.INFORMATION);
         }
     }
@@ -85,14 +90,25 @@ public class SignUp_Controller {
         return matcher.matches();
     }
 
-    private boolean isValidNationalId(String id) {
-        Pattern pattern = Pattern.compile("^\\d{14}$");
-        Matcher matcher = pattern.matcher(id);
-        return matcher.matches();
+    private boolean isValidNationalId(Long id) {
+        //Pattern pattern = Pattern.compile("^\\d{14}$");
+        //Matcher matcher = pattern.matcher(id);
+        //return matcher.matches();
+        int length = String.valueOf(id).length();
+        if(length==14){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
-    private boolean isValidUsername(String username) {
-        return username.contains("@gmail.com");
+    private boolean isValidMail(String mail) {
+        if(mail.contains(".com")&&mail.contains("@")){
+            return true;
+        }
+        return false;
+
     }
 
     private boolean isValidPassword(String password) {

@@ -22,7 +22,7 @@ public class RequestCollection {
         FileHelper.prepareToSave(requests,savingName);
     }
     public static void retrieve(){
-        requests=FileHelper.retrieve(requests,savingName);
+        requests=FileHelper.retrieve(requests,savingName,Request.class);
     }
 
 

@@ -18,7 +18,7 @@ import java.io.InputStream;
 public class Loginer_Controller {
 
     @FXML
-    private TextField usernameField;
+    private TextField emailField;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -47,14 +47,14 @@ public class Loginer_Controller {
     }
     @FXML
     public void LoginAction(ActionEvent actionEvent) {
-        String username = usernameField.getText();
+        String email = emailField.getText();
         String password = passwordField.getText();
 
-        if (username.isEmpty()) {
-            showAlert("Invalid Username", "Username must not be empty.", AlertType.ERROR);
+        if (email.isEmpty()) {
+            showAlert("Invalid Email", "Username must not be empty.", AlertType.ERROR);
             return;
         }
-        if (!username.contains("@gmail.com")) {
+        if (!email.contains(".com") || !email.contains("@")) {
             showAlert("Invalid Username", "Username must contain '@gmail.com'.", AlertType.ERROR);
             return;
         }
@@ -75,9 +75,15 @@ public class Loginer_Controller {
             showAlert("Invalid Password", "Password must contain at least one special character.", AlertType.ERROR);
             return;
         }
-        showAlert("Success", "Login Successful!", AlertType.INFORMATION);
+        if (UserCollection.search(email, password)) {
+            showAlert("Success", "Login Successful!", AlertType.INFORMATION);
+        } else if (OwnerCollection.search(email,password)) {
+            showAlert("Success", "Login Successful!", AlertType.INFORMATION);
+        }
+        else{
+            showAlert("failed", "failed!", AlertType.INFORMATION);
+        }
     }
-
     @FXML
     private void togglePasswordVisibility() {
         if (passwordVisibleField.isVisible()) {
@@ -127,7 +133,7 @@ public class Loginer_Controller {
 
             signUpStage.show();
 
-            Stage currentStage = (Stage) usernameField.getScene().getWindow();
+            Stage currentStage = (Stage) emailField.getScene().getWindow();
             currentStage.close();
         } catch (Exception e) {
             e.printStackTrace();

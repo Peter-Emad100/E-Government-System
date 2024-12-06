@@ -4,18 +4,20 @@ package com.example.egoverment;
 public class Loginer extends Human {
     private String loginName;
     private String Password;
-
-    public Loginer(String name, int id, String loginName, String Password) {
+    private String mail;
+    public Loginer(String name, long id, String loginName, String Password,String mail) {
         super(name, id);
         this.loginName = loginName;
         this.Password = Password;
-
+        this.mail=mail;
     }
 
     protected String getLoginName() {
         return loginName;
     }
-
+    public String getMail() {
+        return mail;
+    }
     protected String getPassword() {
         return Password;
     }

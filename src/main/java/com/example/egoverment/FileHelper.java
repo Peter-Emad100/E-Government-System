@@ -29,12 +29,12 @@ public class FileHelper {
             System.err.println("Error while saving JSON to file: " + e.getMessage());
         }
     }
-    public static<T> ArrayList<T> retrieve(ArrayList<T> arrayToRetrieve, String arrayName) {
+    public static<T> ArrayList<T> retrieve(ArrayList<T> arrayToRetrieve, String arrayName,Class classOfT) {
         try (JsonReader reader = new JsonReader(new FileReader(FileHelper.path))) {
             JsonObject jsonObject = JsonParser.parseReader(reader).getAsJsonObject();
             JsonArray jsonArray = jsonObject.getAsJsonArray(arrayName);
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            Type listType = new TypeToken<ArrayList<T>>(){}.getType();
+            Type listType = TypeToken.getParameterized(ArrayList.class, classOfT).getType();
              arrayToRetrieve = gson.fromJson(jsonArray, listType);
              return arrayToRetrieve;
         } catch (IOException e) {

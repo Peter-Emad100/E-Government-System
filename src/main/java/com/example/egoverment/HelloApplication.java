@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
    @Override
     public void start(Stage primaryStage) throws Exception {
       try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("MinistryOfElectricity.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("loginer.fxml"));
            Pane root = (Pane) loader.load();
            //Create a scene and set the stage
           System.out.println("in");
@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
            primaryStage.show();
 
            //Access the controller if needed
-           Electricity_Controller controller = loader.getController();
+           Loginer_Controller controller = loader.getController();
       } catch (Exception e) {
            e.printStackTrace();
            System.out.println("Failed to load FXML. Check the file path.");

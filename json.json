@@ -4,7 +4,7 @@
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ministry of Interior",
-        "id": 0.0
+        "id": 0
       },
       "departments": []
     },
@@ -12,7 +12,7 @@
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ministry of Education",
-        "id": 1.0
+        "id": 1
       },
       "departments": []
     },
@@ -20,7 +20,7 @@
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ministry of Finance",
-        "id": 2.0
+        "id": 2
       },
       "departments": []
     },
@@ -28,16 +28,15 @@
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ministry of Transportation",
-        "id": 3.0
+        "id": 3
       },
       "departments": []
     },
     {
-      "bloodBanks": [],
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ministry of Health and population",
-        "id": 4.0
+        "id": 4
       },
       "departments": [
         {
@@ -54,5 +53,14 @@
   ],
   "requests": [],
   "owners": [],
-  "users": []
+  "users": [
+    {
+      "phone": "01555555555",
+      "loginName": "lol",
+      "Password": "Lollol@00",
+      "mail": "lol@gmail.com",
+      "name": "lol",
+      "id": 55555555555555
+    }
+  ]
 }

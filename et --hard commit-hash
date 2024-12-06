@@ -1,0 +1,261 @@
+[33mcommit e971f04db66ac33ba85bf9ef70262e695f215d1a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 2e6a70b 02db5f5
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Fri Dec 6 00:38:16 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 2e6a70b21f9f2474fc1b7296b41e888fd120b104[m
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Thu Dec 5 22:39:00 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 02db5f51cd3c7dcdcb744bf9cd903996355a7f4a[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Thu Dec 5 03:34:26 2024 +0200
+
+    small updates
+    
+    name in ministriesCollection update
+
+[33mcommit 7f9d7c9b7ab55fc5365dbcb5cb6919c6264fc701[m
+Author: farahweaam <fffsss.weaam@gmail.com>
+Date:   Thu Dec 5 03:14:00 2024 +0200
+
+    changes in gui
+    
+    -login GUI
+    -Add Employee GUI
+    -Ministry of health GUI
+
+[33mcommit dadeeb706be780da0654cf30ed86cc492af742a7[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Thu Dec 5 02:39:56 2024 +0200
+
+    major changes
+    
+    implemented file saving and retrieving , changed the local date to string due to json compatibility issue , changed how owner and user collections works to make it static and less dependent on the main
+
+[33mcommit 5f5f0b5327e5294331e76057eb08985532e86b05[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Thu Dec 5 00:27:52 2024 +0200
+
+    Addemployee Hana
+
+[33mcommit edb244a6c1ea759ab6c34e1934351a06c7ab92d9[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Thu Dec 5 00:26:48 2024 +0200
+
+    Addemployee Hana
+
+[33mcommit b911fb3801b4c20706c8b1181060bd6afdb143bb[m
+Author: Layla Abdalla <laylamaabdalla@gmail.com>
+Date:   Wed Dec 4 22:01:01 2024 +0200
+
+    Added User Main Menu
+
+[33mcommit e9cbff793a5469c9bdbea0485d9e831df9c7fcab[m
+Author: farahweaam <fffsss.weaam@gmail.com>
+Date:   Wed Dec 4 03:01:53 2024 +0200
+
+    Updates
+    
+    -Updates to add request function
+    -Request GUI
+    -Education GUI
+    -Add/remove ministry GUI
+    -removing department and form ids
+    -Finance Ministry GUI
+
+[33mcommit 86744861d4c00e000501c618093191dc6e94f33c[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Tue Dec 3 06:08:39 2024 +0200
+
+    .
+
+[33mcommit 45c9cefd2f5308c634a8debc4a418072b1f2a684[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Tue Dec 3 06:07:01 2024 +0200
+
+    initial ministriesCollection
+
+[33mcommit cc732a98d64789735d3d3f151e2376762d8c04af[m
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Mon Dec 2 19:03:59 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 2ffc9457d55eba0fc09ee969fbde28d339560d2d[m
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Mon Dec 2 12:53:26 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit ff4c9feae142c1e000ceb657acf08ada015d3cbb[m
+Merge: bc79bc8 82ddaf2
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Mon Dec 2 04:37:45 2024 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       .idea/workspace.xml
+    #       src/main/java/com/example/egoverment/HelloApplication.java
+    #       src/main/java/com/example/egoverment/Loginer.java
+    #       src/main/java/com/example/egoverment/User.java
+    #       src/main/java/module-info.java
+
+[33mcommit bc79bc8081bc656e3a3de7476fd61dcb13cf2b98[m
+Author: NoraahFarouk <nahfarouk@gmail.com>
+Date:   Mon Dec 2 04:23:58 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 82ddaf27a7e29a0af7fb3929319b9108cc5b7c3c[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Mon Dec 2 02:39:42 2024 +0200
+
+    live exchange rate
+    
+    exchange rates are fetched from api to get live data
+
+[33mcommit c5c7ce4973de392335b409c17a8e3096293874ed[m
+Author: farahweaam <fffsss.weaam@gmail.com>
+Date:   Sun Dec 1 03:09:57 2024 +0200
+
+    Ministry of interior and other changes regarding variable types
+
+[33mcommit 1800fdfea0b17e3381c0b1381ab6099ad98503e2[m
+Author: Mohamed A. Ibrahim <161064155+Mercurial1337@users.noreply.github.com>
+Date:   Sat Nov 30 23:36:10 2024 +0200
+
+    Ministry Of Health And Population
+    
+    * Search for blood banks that have available blood bags based on blood type and quantity selection + error handling for invalid input
+    
+     * Displayed search results or  error messages via alerts
+    
+    *Logout button is just a placeholder at the moment with no functionality
+    
+    * Maybe will do refinements to make a whole new aesthetic scene that includes a list with all available Blood Banks
+
+[33mcommit 5472ab0eb26ca66ed6bc12bbae4635013024b946[m
+Author: Layla Abdalla <laylamaabdalla@gmail.com>
+Date:   Sat Nov 30 22:17:28 2024 +0200
+
+    Ministry of Education more updates
+
+[33mcommit b6eb145aee24bb28841517ff563b45ace3152cbf[m
+Author: norhan <163602553+norhanashryy@users.noreply.github.com>
+Date:   Sat Nov 30 21:03:32 2024 +0200
+
+    changes in electricity2
+
+[33mcommit 1c98b935a770ee4df476b004d016ec500801c7e0[m
+Author: Layla Abdalla <laylamaabdalla@gmail.com>
+Date:   Sat Nov 30 16:32:45 2024 +0200
+
+    education updatesss
+
+[33mcommit 488cf8e8bad0a08c1dea2102d49382a12bea84f0[m
+Author: norhan <163602553+norhanashryy@users.noreply.github.com>
+Date:   Sat Nov 30 03:29:32 2024 +0200
+
+    changes in ministry of electricity
+
+[33mcommit a198c85e07b2fab79e10f55f6b37b52373d8d369[m
+Author: Layla Abdalla <laylamaabdalla@gmail.com>
+Date:   Sat Nov 30 01:39:12 2024 +0200
+
+    primary stage exams(still needs some work)
+
+[33mcommit 2e2e0a19ae85ad591b9469666b5f577fe45caa09[m
+Author: farahweaam <fffsss.weaam@gmail.com>
+Date:   Fri Nov 29 18:54:13 2024 +0200
+
+    changes in ministry of interior
+
+[33mcommit ab3bca3aa9260a3b0aee379745276be99dd2f369[m
+Author: farahweaam <fffsss.weaam@gmail.com>
+Date:   Fri Nov 29 02:21:47 2024 +0200
+
+    part of interior ministry
+
+[33mcommit d56279b8eb43c6028500b6322d355c252da85b42[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Fri Nov 29 00:02:28 2024 +0200
+
+    Add Ministry
+
+[33mcommit a6919a7211c083551b52d3c3925198f5a0aca47d[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Thu Nov 28 17:51:00 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit ecc6a9997abb4edbba227686ef123131cbfee080[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Thu Nov 28 17:02:43 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 5e056dc977f90ad5f86c4ae8deababfaee04d79c[m
+Author: norhan <163602553+norhanashryy@users.noreply.github.com>
+Date:   Mon Nov 25 23:51:37 2024 +0200
+
+    tourism1 MinistryOfElectricity
+
+[33mcommit 47841c061283d13a41b1fec8d80cf572cb1d4910[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Mon Nov 25 22:48:22 2024 +0200
+
+    tourism1
+
+[33mcommit fe603f8508717e9ecd0ac13d7063a78925b6cb52[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Mon Nov 25 22:43:23 2024 +0200
+
+    tourism1
+
+[33mcommit e0b8bdaf3e49ec3580a95ffab213cc922873ad47[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Mon Nov 25 11:50:19 2024 +0200
+
+    testing....
+
+[33mcommit be85cb1e286ed8e44a59281165f2ca59bb82c4a1[m
+Author: Hana <nona.mazen.789@gmail.com>
+Date:   Mon Nov 25 11:39:58 2024 +0200
+
+    testing....
+
+[33mcommit e841dcf706095e7f46eb51530a393dcb2d77ed4b[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Mon Nov 25 01:50:55 2024 +0200
+
+    fixed version
+    
+    boot layer fixed version
+
+[33mcommit 45f11ba54bbfef458e2dd6cb8e65d0f289f88ff8[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Sun Nov 24 19:07:06 2024 +0200
+
+    basic start structure part2
+    
+    basic start structure to facilitate work on main features part2
+
+[33mcommit 51920b35439208a4ba4fee5fa7442807df2a7842[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Sun Nov 24 04:02:05 2024 +0200
+
+    basic start structure
+    
+    basic start structure to facilitate work on main features
+
+[33mcommit 95003f062b4367d41112bf602170a7d0cca456f3[m
+Author: Peter Emad <139802433+Peter-Emad100@users.noreply.github.com>
+Date:   Sat Nov 23 21:05:15 2024 +0200
+
+    Initial commit

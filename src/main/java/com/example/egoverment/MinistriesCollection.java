@@ -51,7 +51,7 @@ public class  MinistriesCollection {
             FileHelper.prepareToSave(minis, savingName);
         }
         public static void retrieve () {
-            minis = FileHelper.retrieve(minis, savingName);
+            minis = FileHelper.retrieve(minis, savingName, Ministry.class);
         }
         public static ArrayList<Ministry> getMinistries () {
             return minis;
