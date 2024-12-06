@@ -1,52 +1,104 @@
 package com.example.egoverment;
 
-
-    import javafx.fxml.FXML;
-    import javafx.scene.control.Alert;
-    import javafx.scene.control.Button;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+
+import java.util.ArrayList;
 
 public class RemoveEmpController {
 
-        @FXML
-        private Button AddMinistryButton;
+    @FXML
+    private Button AddMinistryButton;
 
-        @FXML
-        private TextField depname;
+    @FXML
+    private ComboBox<String> depname;
 
-        @FXML
-        private TextField empid;
+    @FXML
+    private TextField empid;
 
-    /*public void removeEmployee() {
-        String departmentName = depname.getText();
-        int employeeId;
+    @FXML
+    private ComboBox<String> minname;
 
-        try {
-            employeeId = Integer.parseInt(empid.getText());
-        } catch (NumberFormatException e) {
-            showAlert("Error", "Employee ID must be a number.");
-            return;
-        }
+    private ArrayList<Ministry> ministries;
 
-        Department department = MinistriesCollection.findDepartmentByName(departmentName);
-        if (department == null) {
-            showAlert("Error", "No department found with the given name.");
-            return;
-        }
+    @FXML
+    private void initialize() {
+        //get ministries from ministries collection
+        ministries = MinistriesCollection.getMinistries();
 
-        boolean removed = department.removeEmployee(employeeId);
-        if (removed) {
-            showAlert("Success", "Employee removed successfully from " + departmentName);
+        if (ministries != null && !ministries.isEmpty()) {
+            // fill ministry combobox
+            for (Ministry ministry : ministries) {
+                minname.getItems().add(ministry.getMinistryName());
+            }
+
+            // Add a listener to populate departments based on the selected ministry
+            minname.setOnAction(event -> {
+                String selectedMinistry = minname.getValue();
+                depname.getItems().clear();
+
+                for (Ministry ministry : ministries) {
+                    if (ministry.getMinistryName().equals(selectedMinistry)) {
+                        for (Department department : ministry.getDepartments()) {
+                            depname.getItems().add(department.getDepartmentName());
+                        }
+                        break;
+                    }
+                }
+            });
         } else {
-            showAlert("Error", "Employee not found in " + departmentName);
+            System.out.println("Failed to load ministries or no data found.");
         }
     }
-    private void showAlert(String title, String content) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    @FXML
+    private void removeEmployee() {
+        try {
+            String selectedMinistry = minname.getValue();
+            String selectedDepartment = depname.getValue();
+            int employeeId;
+
+            try {
+                employeeId = Integer.parseInt(empid.getText());
+            } catch (NumberFormatException e) {
+                showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid Employee ID", "Please enter a valid number for Employee ID.");
+                return;
+            }
+
+            if (selectedMinistry == null || selectedDepartment == null || employeeId == 0) {
+                showAlert(Alert.AlertType.WARNING, "Missing Input", "Incomplete Fields", "Please fill in all required fields.");
+                return;
+            }
+
+            for (Ministry ministry : ministries) {
+                if (ministry.getMinistryName().equals(selectedMinistry)) {
+                    for (Department department : ministry.getDepartments()) {
+                        for (Employee employee : department.getEmployees()) {
+                            if (employee.getId() == employeeId) {
+                                department.getEmployees().remove(employee);
+                                showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Removed", "The employee was removed successfully!");
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+
+            showAlert(Alert.AlertType.WARNING, "Not Found", "Employee Not Found", "The specified employee was not found.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "An error occurred", e.getMessage());
+        }
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String header, String content) {
+        Alert alert = new Alert(alertType);
         alert.setTitle(title);
+        alert.setHeaderText(header);
         alert.setContentText(content);
         alert.showAndWait();
-    }*/
+    }
 }
-
 

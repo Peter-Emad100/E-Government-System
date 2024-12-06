@@ -27,14 +27,13 @@ public class AddEmpController {
 
     private ArrayList<Ministry> ministries;
 
-
     @FXML
     private void initialize() {
-        // Retrieve ministries from the JSON file
-        ministries = FileHelper.retrieve(new ArrayList<>(), "ministries", Ministry.class);
+        //get ministries from ministries collection
+        ministries = MinistriesCollection.getMinistries();
 
         if (ministries != null && !ministries.isEmpty()) {
-            // Populate the ministry ComboBox
+            // fill ministry comboboc
             for (Ministry ministry : ministries) {
                 ministryComboBox.getItems().add(ministry.getMinistryName());
             }
@@ -58,21 +57,21 @@ public class AddEmpController {
         }
     }
 
-
     @FXML
     private void addEmployee() {
         String selectedMinistry = ministryComboBox.getValue();
         String selectedDepartment = departmentComboBox.getValue();
         String employeeName = empname.getText();
-        int employeeId = Integer.parseInt(empid.getText());
+        int employeeId;
+
         try {
             employeeId = Integer.parseInt(empid.getText());
         } catch (NumberFormatException e) {
             showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid Employee ID", "Please enter a valid number for Employee ID.");
             return;
         }
-        if (selectedMinistry == null || selectedDepartment == null || employeeName.isEmpty() || employeeId==0) {
-            // Show an error message or log
+
+        if (selectedMinistry == null || selectedDepartment == null || employeeName.isEmpty() || employeeId == 0) {
             showAlert(Alert.AlertType.WARNING, "Missing Input", "Incomplete Fields", "Please fill in all required fields.");
             return;
         }
@@ -83,15 +82,13 @@ public class AddEmpController {
                 for (Department department : ministry.getDepartments()) {
                     for (Employee employee : department.getEmployees()) {
                         if (employee.getId() == employeeId) {
-                            showAlert(Alert.AlertType.WARNING, "Duplicate ID", "Employee ID Conflict", "An employee with this ID already exists. Please use a unique ID.");
+                            showAlert(Alert.AlertType.WARNING, "Duplicate ID", "Employee ID already exists", "Please use a unique ID!");
                             return;
                         }
                     }
                     if (department.getDepartmentName().equals(selectedDepartment)) {
                         // Create a new employee
-                        Employee newEmployee = new Employee(employeeName,employeeId);
-                       /* newEmployee.setEmpName(employeeName);
-                        newEmployee.setEmpId(employeeId);*/
+                        Employee newEmployee = new Employee(employeeName, employeeId);
 
                         // Add employee to the department
                         if (department.getEmployees() == null) {
@@ -99,9 +96,6 @@ public class AddEmpController {
                         }
                         department.getEmployees().add(newEmployee);
 
-                        // Prepare and save the updated ministries back to the JSON file
-                        FileHelper.prepareToSave(ministries, "ministries");
-                        FileHelper.saveAll();
 
                         showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Added", "The employee was added successfully!");
                         return;
@@ -112,6 +106,7 @@ public class AddEmpController {
 
         System.out.println("Failed to find the specified department.");
     }
+
     private void showAlert(Alert.AlertType alertType, String title, String header, String content) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -119,5 +114,4 @@ public class AddEmpController {
         alert.setContentText(content);
         alert.showAndWait();
     }
-
 }
