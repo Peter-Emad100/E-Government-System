@@ -8,8 +8,12 @@ public class Ministry {
     private Minister minister;
     protected ArrayList<Department> departments;
 
+    public String getMinisterName() {
+        return minister.getName();
+    }
+
     public String getMinistryName() {
-        return minister.getName(); // Ensure Minister class has a `getName()` method
+        return ministryName;
     }
 
 

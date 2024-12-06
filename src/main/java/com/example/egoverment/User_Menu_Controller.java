@@ -54,7 +54,7 @@ public class User_Menu_Controller {
           int idx=0;
         for (Ministry ministry : MinistriesCollection.getMinistries()) {
             int finalIdx = idx;
-            String ministryName = ministry.getMinster().getName();
+            String ministryName = ministry.getMinistryName();
             Button ministryButton = new Button(ministryName);
 
 
