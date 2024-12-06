@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -95,19 +96,11 @@ public class SignUp_Controller {
         //Matcher matcher = pattern.matcher(id);
         //return matcher.matches();
         int length = String.valueOf(id).length();
-        if(length==14){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return length == 14;
     }
 
     private boolean isValidMail(String mail) {
-        if(mail.contains(".com")&&mail.contains("@")){
-            return true;
-        }
-        return false;
+        return mail.contains(".com") && mail.contains("@");
 
     }
 

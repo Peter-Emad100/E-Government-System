@@ -19,15 +19,15 @@ public class  MinistriesCollection {
     private final static String savingName="ministries";
     private static ArrayList<Ministry> minis = new ArrayList<Ministry>();
 
-    /*static{
-        minis.add(new Ministry("Ministry of Interior",i++));
-        minis.add(new Ministry("Ministry of Education",i++));
-        minis.add(new Ministry("Ministry of Finance",i++));
-        minis.add(new Ministry("Ministry of Transportation",i++));
-        //minis.add(new MinistryOfElectricity("Ministry Electricity and Energy",i++));
-        minis.add(new MinistryOfHealthAndPopulation("Ministry of Health and population",i++));
-
-    };*/
+    static{
+        minis.add(new Ministry("Ministry of Interior"));
+        minis.add(new Ministry("Ministry of Education"));
+        minis.add(new Ministry("Ministry of Finance"));
+        minis.add(new Ministry("Ministry of Transportation"));
+        minis.add(new Ministry("Ministry Electricity and Energy"));
+        minis.add(new MinistryOfHealthAndPopulation("Ministry of Health and population"));
+        minis.add(new Ministry("Ministry Of Tourism"));
+    };
     /*private static ArrayList<Department> dep =new ArrayList<>();
     static {
         dep.add(new Department("department of national budget"));

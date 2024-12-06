@@ -1,42 +1,56 @@
 {
   "ministries": [
     {
+      "ministryName": "Ministry of Interior",
       "minister": {
         "startingDate": "2024-12-05",
-        "name": "Ministry of Interior",
-        "id": 0
-      },
-      "departments": []
-    },
-    {
-      "minister": {
-        "startingDate": "2024-12-05",
-        "name": "Ministry of Education",
-        "id": 1
-      },
-      "departments": []
-    },
-    {
-      "minister": {
-        "startingDate": "2024-12-05",
-        "name": "Ministry of Finance",
+        "name": "someone",
         "id": 2
       },
       "departments": []
     },
     {
+      "ministryName": "Ministry of Education",
       "minister": {
         "startingDate": "2024-12-05",
-        "name": "Ministry of Transportation",
-        "id": 3
+        "name": "Daniel Zeichner",
+        "id": 2
       },
       "departments": []
     },
     {
+      "ministryName": "Ministry of Finance",
       "minister": {
         "startingDate": "2024-12-05",
-        "name": "Ministry of Health and population",
-        "id": 4
+        "name": "Ashraf Ibrahim",
+        "id": 2
+      },
+      "departments": []
+    },
+    {
+      "ministryName": "Ministry of Transportation",
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Maged Shawky",
+        "id": 2
+      },
+      "departments": []
+    },
+    {
+      "ministryName": "Ministry Electricity and Energy",
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Sadek Ahmed Elswedy",
+        "id": 2
+      },
+      "departments": []
+    },
+    {
+      "ministryName": "Ministry of Health and population",
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Ahmed Saeed Kilani",
+        "id": 2
       },
       "departments": [
         {
@@ -49,6 +63,15 @@
           ]
         }
       ]
+    },
+    {
+      "ministryName": "Ministry Of Tourism",
+      "minister": {
+        "startingDate": "2024-12-05",
+        "name": "Naguib Sawiris",
+        "id": 2
+      },
+      "departments": []
     }
   ],
   "requests": [],
@@ -56,10 +79,10 @@
   "users": [
     {
       "phone": "01555555555",
-      "loginName": "lol",
-      "Password": "Lollol@00",
-      "mail": "lol@gmail.com",
-      "name": "lol",
+      "loginName": "fun fun",
+      "Password": "97cd6f41e058cc626d03886718d150a0a3d87b1bbcd8213bf5a7edd2f0db69bd",
+      "mail": "fun@gmail.com",
+      "name": "fun",
       "id": 55555555555555
     }
   ]
