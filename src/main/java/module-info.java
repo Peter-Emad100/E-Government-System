@@ -14,6 +14,7 @@ module com.example.egoverment {
     requires com.google.gson;
 
     requires java.desktop;
+    requires java.xml.crypto;
 
     opens com.example.egoverment to javafx.fxml,com.google.gson;
     exports com.example.egoverment;

@@ -15,9 +15,21 @@ public class Department {
         return departmentName;
     }
 
-    public void addEmployee(Employee employee) {
-        employees.add(employee);
+    public ArrayList<Employee> getEmployees() {
+        return employees;
     }
+
+    public void setEmployees(ArrayList<Employee> employees) {
+        this.employees = employees;
+    }
+
+    /* public  String getEmployee1() {
+
+                return employees.getFirst().getName();
+            }*/
+   /* public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }*/
     public boolean removeEmployee(int employeeId) {
         return employees.removeIf(emp -> emp.getId() == employeeId);
     }
