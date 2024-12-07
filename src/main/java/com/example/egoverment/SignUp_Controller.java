@@ -180,23 +180,8 @@ public class SignUp_Controller {
 
     @FXML
     private void GoBack() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Loginer.fxml"));
-            AnchorPane signUpPage = loader.load();
-
-            Loginer_Controller gobackController = loader.getController();
-
-            Stage gobackStage = new Stage();
-            gobackStage.setTitle("Log In");
-            gobackStage.setScene(new Scene(signUpPage));
-
-            gobackStage.show();
-            Stage currentStage = (Stage) nameField.getScene().getWindow();
-            currentStage.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Stage currentStage = (Stage) nameField.getScene().getWindow();
+        PageSwitchHelper.switcher("Loginer.fxml","Login",currentStage);
     }
 
 }
