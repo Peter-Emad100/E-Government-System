@@ -1,0 +1,151 @@
+Index: src/main/java/com/example/egoverment/MinistriesCollection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.egoverment;\r\nimport java.io.FileReader;\r\nimport java.io.IOException;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Paths;\r\nimport java.util.ArrayList;\r\nimport com.google.gson.JsonObject;\r\nimport com.google.gson.JsonParser;\r\nimport com.google.gson.JsonArray;\r\nimport com.google.gson.Gson;\r\nimport com.google.gson.GsonBuilder;\r\nimport java.io.FileWriter;\r\nimport com.google.gson.reflect.TypeToken;\r\nimport com.google.gson.stream.JsonReader;\r\n\r\nimport java.lang.reflect.Type;\r\npublic class  MinistriesCollection {\r\n    private static int i = 0;\r\n    private final static String savingName=\"ministries\";\r\n    private static ArrayList<Ministry> minis = new ArrayList<Ministry>();\r\n\r\n    /*static{\r\n        minis.add(new Ministry(\"Ministry of Interior\",i++));\r\n        minis.add(new Ministry(\"Ministry of Education\",i++));\r\n        minis.add(new Ministry(\"Ministry of Finance\",i++));\r\n        minis.add(new Ministry(\"Ministry of Transportation\",i++));\r\n        //minis.add(new MinistryOfElectricity(\"Ministry Electricity and Energy\",i++));\r\n        minis.add(new MinistryOfHealthAndPopulation(\"Ministry of Health and population\",i++));\r\n\r\n    };*/\r\n    /*private static ArrayList<Department> dep =new ArrayList<>();\r\n    static {\r\n        dep.add(new Department(\"department of national budget\"));\r\n        dep.add(new Department(\"department of treasury operations\"));\r\n        dep.add(new Department(\"department of information technology management\"));\r\n\r\n    }\r\n    public static Department findDepartmentByName(String name) {\r\n        for (Department departments : dep) {\r\n            if (departments.getDepartmentName ().equalsIgnoreCase(name)) {\r\n                return departments;\r\n            }\r\n        }\r\n        return null;\r\n    }*/\r\n\r\n    public static void add (String name){\r\n        minis.add(new Ministry(name));\r\n    }\r\n\r\n    public static void remove(Ministry ministryToRemove) {\r\n        minis.remove(ministryToRemove); // Directly remove the object\r\n    }\r\n\r\n\r\n    //        public static void remove(String name) {\r\n//            for (int i = 0; i < minis.size(); i++) {\r\n//                if (minis.get(i).getMinster().getName().equals(name)) {\r\n//                    minis.remove(i);\r\n//                    return;\r\n//                }\r\n//            }\r\n//        }\r\n    public static void edit(String oldName, String newName) {\r\n\r\n    }\r\n    public static void prepareToSave () {\r\n        FileHelper.prepareToSave(minis, savingName);\r\n    }\r\n    public static void retrieve () {\r\n        minis = FileHelper.retrieve(minis, savingName, Ministry.class);\r\n    }\r\n    public static ArrayList<Ministry> getMinistries () {\r\n        return minis;\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/egoverment/MinistriesCollection.java b/src/main/java/com/example/egoverment/MinistriesCollection.java
+--- a/src/main/java/com/example/egoverment/MinistriesCollection.java	(revision 74a89d6e7a8e83979035be05a093d59a9fef0f2e)
++++ b/src/main/java/com/example/egoverment/MinistriesCollection.java	(date 1733581073475)
+@@ -19,6 +19,7 @@
+     private final static String savingName="ministries";
+     private static ArrayList<Ministry> minis = new ArrayList<Ministry>();
+ 
++
+     /*static{
+         minis.add(new Ministry("Ministry of Interior",i++));
+         minis.add(new Ministry("Ministry of Education",i++));
+@@ -61,8 +62,12 @@
+ //                }
+ //            }
+ //        }
++
++
++
++
+     public static void edit(String oldName, String newName) {
+-
++        minis.get(minis.indexOf(new Ministry (oldName))).setMinistryName(newName);
+     }
+     public static void prepareToSave () {
+         FileHelper.prepareToSave(minis, savingName);
+Index: src/main/java/com/example/egoverment/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.egoverment;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class HelloApplication extends Application {\r\n   @Override\r\n    public void start(Stage primaryStage) throws Exception {\r\n      try {\r\n            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(\"User_MainMenu.fxml\"));\r\n           Pane root = (Pane) loader.load();\r\n           //Create a scene and set the stage\r\n          System.out.println(\"in\");\r\n            Scene scene = new Scene(root);\r\n           primaryStage.setScene(scene);\r\n         primaryStage.setTitle(\"\");\r\n           primaryStage.show();\r\n\r\n           //Access the controller if needed\r\n//           Loginer_Controller controller = loader.getController();\r\n          AddMinistryController controller = (AddMinistryController) loader.getController();\r\n      } catch (Exception e) {\r\n           e.printStackTrace();\r\n           System.out.println(\"Failed to load FXML. Check the file path.\");\r\n         }\r\n   }\r\n\r\n//    public static void main(String[] args) {\r\n//        launch();\r\n//    }\r\n\r\n//    public void start(Stage primaryStage) throws Exception{\r\n//        Parent root = FXMLLoader.load(getClass().getResource(\"FinanceMinistry.fxml\"));\r\n//        primaryStage.setTitle(\"E-government System\");\r\n//        primaryStage.setScene(new Scene(root));\r\n//        primaryStage.show();\r\n//    }\r\n    public static void main (String[] args){\r\n       FileHelper.retrieveAll();\r\n       launch(args);\r\n//        ArrayList<Ministry> ministries= new ArrayList<>();\r\n//        ministries=MinistriesCollection.getMinistries();\r\n//        int length = ministries.size()-1;\r\n//        for(int i=0;i<length;i++)\r\n//        {\r\n//            System.out.println(i + ministries.get(i).getMinistryName());\r\n//        }\r\n       FileHelper.saveAll();\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/egoverment/HelloApplication.java b/src/main/java/com/example/egoverment/HelloApplication.java
+--- a/src/main/java/com/example/egoverment/HelloApplication.java	(revision 74a89d6e7a8e83979035be05a093d59a9fef0f2e)
++++ b/src/main/java/com/example/egoverment/HelloApplication.java	(date 1733524205539)
+@@ -44,13 +44,14 @@
+     public static void main (String[] args){
+        FileHelper.retrieveAll();
+        launch(args);
+-//        ArrayList<Ministry> ministries= new ArrayList<>();
+-//        ministries=MinistriesCollection.getMinistries();
+-//        int length = ministries.size()-1;
+-//        for(int i=0;i<length;i++)
+-//        {
+-//            System.out.println(i + ministries.get(i).getMinistryName());
+-//        }
++        ArrayList<Ministry> ministries= MinistriesCollection.getMinistries();
++
++        int length = ministries.size()-1;
++        for (Ministry ministry : MinistriesCollection.getMinistries()) {
++
++            MinistriesCollection.edit("ahmed", "nora");
++            System.out.println(ministry.ministryName);
++       }
+        FileHelper.saveAll();
+ 
+     }
+Index: src/main/java/com/example/egoverment/Department.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.egoverment;\r\n\r\nimport java.util.ArrayList;\r\npublic class Department {\r\n    private String departmentName;\r\n    private ArrayList<Employee> employees;\r\n    ArrayList<Form> forms;\r\n\r\n    public Department(String departmentName){\r\n        this.departmentName=departmentName;\r\n        employees=new ArrayList<Employee>();\r\n        forms=new ArrayList<Form>();\r\n    }\r\n    public String getDepartmentName(){\r\n        return departmentName;\r\n    }\r\n\r\n    public ArrayList<Employee> getEmployees() {\r\n        return employees;\r\n    }\r\n\r\n    public void setEmployees(ArrayList<Employee> employees) {\r\n        this.employees = employees;\r\n    }\r\n\r\n    /* public  String getEmployee1() {\r\n\r\n                return employees.getFirst().getName();\r\n            }*/\r\n   /* public void addEmployee(Employee employee) {\r\n        employees.add(employee);\r\n    }*/\r\n    public boolean removeEmployee(int employeeId) {\r\n        return employees.removeIf(emp -> emp.getId() == employeeId);\r\n    }\r\n    public void addFormtoDepartment(String formName)\r\n    {\r\n        forms.add(new Form(formName));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/egoverment/Department.java b/src/main/java/com/example/egoverment/Department.java
+--- a/src/main/java/com/example/egoverment/Department.java	(revision 74a89d6e7a8e83979035be05a093d59a9fef0f2e)
++++ b/src/main/java/com/example/egoverment/Department.java	(date 1733581592169)
+@@ -4,7 +4,7 @@
+ public class Department {
+     private String departmentName;
+     private ArrayList<Employee> employees;
+-    ArrayList<Form> forms;
++    public static ArrayList<Form> forms;
+ 
+     public Department(String departmentName){
+         this.departmentName=departmentName;
+@@ -30,6 +30,7 @@
+    /* public void addEmployee(Employee employee) {
+         employees.add(employee);
+     }*/
++
+     public boolean removeEmployee(int employeeId) {
+         return employees.removeIf(emp -> emp.getId() == employeeId);
+     }
+@@ -37,4 +38,8 @@
+     {
+         forms.add(new Form(formName));
+     }
++
++    public static ArrayList<Form> getforms() {
++        return forms;
++    }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9\" name=\"Changes\" comment=\"tourism1 MinistryOfElectricity\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/json.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/json.json\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Peter-Emad100&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,\r\n    &quot;accountId&quot;: &quot;97b8d32c-7ea5-4416-bee9-71319843e022&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2pGMtTY7zQQA0rlRJjxoCj18XtA\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Ministry_Tourism.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Ministry_of_Tourism.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_directory_selection&quot;: &quot;C:/Users/Dell/IdeaProjects/E-Government-System444/src/main/java/com/example/egoverment&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tabarak/Desktop/New folder (6)/E-Government-System&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Dell\\IdeaProjects\\E-Government-System444\\src\\main\\resources\\com\\example\\egoverment\\assets\" />\r\n      <recent name=\"C:\\Users\\Dell\\IdeaProjects\\E-Government-System444\\src\\main\\java\\com\\example\\egoverment\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Dell\\IdeaProjects\\E-Government-System444\\src\\main\\resources\\com\\example\\egoverment\" />\r\n      <recent name=\"C:\\Users\\Dell\\IdeaProjects\\E-Government-System444\\src\\main\\java\\com\\example\\egoverment\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.HelloApplication\">\r\n    <configuration name=\"HelloApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.egoverment.HelloApplication\" />\r\n      <module name=\"EGoverment\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.egoverment.MyController\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Ministry_Tourism\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.egoverment.Ministry_Tourism\" />\r\n      <module name=\"EGoverment\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.egoverment.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"E-Government-System-master\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"E-Government-System-master\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.HelloApplication\" />\r\n        <item itemvalue=\"Application.Ministry_Tourism\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9\" name=\"Changes\" comment=\"\" />\r\n      <created>1732388175592</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1732388175592</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"testing....\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732527599222</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732527599222</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"testing....\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732528223825</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732528223825</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"tourism1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732567407757</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732567407757</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"tourism1 MinistryOfElectricity\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732806167908</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732806167908</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"tourism1 MinistryOfElectricity\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732809063833</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732809063833</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"tourism1 MinistryOfElectricity\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733136808555</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733136808555</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"testing....\" />\r\n    <MESSAGE value=\"tourism1\" />\r\n    <MESSAGE value=\"tourism1 MinistryOfElectricity\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"tourism1 MinistryOfElectricity\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 74a89d6e7a8e83979035be05a093d59a9fef0f2e)
++++ b/.idea/workspace.xml	(date 1733581073853)
+@@ -7,6 +7,10 @@
+     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/json.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Department.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistriesCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistriesCollection.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Ministry.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,7 +37,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/Peter-Emad100/E-Government-System.git&quot;,
+-    &quot;accountId&quot;: &quot;97b8d32c-7ea5-4416-bee9-71319843e022&quot;
++    &quot;accountId&quot;: &quot;91399937-a01b-4ee3-babe-946ff07d078a&quot;
+   }
+ }</component>
+   <component name="MavenImportPreferences">
+Index: src/main/java/com/example/egoverment/Ministry.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.egoverment;\r\nimport java.time.LocalDate;\r\nimport java.util.ArrayList;\r\n\r\npublic class Ministry {\r\n    static int numberOfMinistries;\r\n    String ministryName;\r\n    private Minister minister;\r\n    protected ArrayList<Department> departments;\r\n\r\n    public String getMinisterName() {\r\n        return minister.getName();\r\n    }\r\n\r\n    public String getMinistryName() {\r\n        return ministryName;\r\n    }\r\n\r\n\r\n    public Ministry(String name){\r\n        numberOfMinistries++;\r\n        departments=new ArrayList<Department>();\r\n        ministryName=name;\r\n\r\n\r\n    }\r\n    public Minister getMinster() {\r\n        return minister;\r\n\r\n    }\r\n\r\n    public ArrayList<Department> getDepartments() {\r\n        return departments;\r\n    }\r\n\r\n    public void addDepartmentsToMinistry(String DeptName) {\r\n\r\n        departments.add(new Department(DeptName));\r\n    }\r\n    public Department findDepartmentByName(String name) {\r\n        for (Department department : departments) {\r\n            if (department.getDepartmentName().equalsIgnoreCase(name)) {\r\n                return department;\r\n            }\r\n        }\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/egoverment/Ministry.java b/src/main/java/com/example/egoverment/Ministry.java
+--- a/src/main/java/com/example/egoverment/Ministry.java	(revision 74a89d6e7a8e83979035be05a093d59a9fef0f2e)
++++ b/src/main/java/com/example/egoverment/Ministry.java	(date 1733523636581)
+@@ -29,6 +29,10 @@
+ 
+     }
+ 
++    public void setMinistryName(String ministryName) {
++        this.ministryName = ministryName;
++    }
++
+     public ArrayList<Department> getDepartments() {
+         return departments;
+     }

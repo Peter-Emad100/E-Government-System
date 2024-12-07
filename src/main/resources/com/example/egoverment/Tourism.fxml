@@ -40,6 +40,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.Button?>
 
 <ScrollPane hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="841.0" vmax="6000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Ministry_Tourism">
   <content>
@@ -78,12 +79,14 @@
                   </Text>
                </children>
             </TextFlow>
-            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="11.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <!-- Back Button -->
+            <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu"/>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="550.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/new-logo_web.png" />
                </image>
             </ImageView>
-            <Label layoutX="64.0" layoutY="15.0" text="Ministry of Tourism">
+            <Label layoutX="500.0" layoutY="15.0" text="Ministry of Tourism">
                <font>
                   <Font name="Elephant" size="14.0" />
                </font>

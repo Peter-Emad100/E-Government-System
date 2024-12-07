@@ -17,6 +17,8 @@ public class User_Menu_Controller {
     @FXML
     private FlowPane flowPane;
 
+
+
     @FXML
     private void HandleLogout(ActionEvent event) {
         try {
@@ -43,8 +45,10 @@ public class User_Menu_Controller {
         fileno.add("Education.fxml");
         fileno.add("FinanceMinistry.fxml");
         fileno.add("Transportation.fxml");
+        fileno.add("MinistryOfElectricity.fxml");
         fileno.add("MinistryOfHealthAndPopulation.fxml");
-        //ministry of electricity?? add it later when fixed
+        fileno.add("Tourism.fxml");
+
 
 
 
@@ -63,11 +67,12 @@ public class User_Menu_Controller {
 
             // on action for each ministry buttons
             //edit idx to fit no. of ministries already developed if needed
-            if(idx<=4) { // if its from the first few ministries load to the ministries page
+            if(idx<=6) { // if its from the first few ministries load to the ministries page
 
                 ministryButton.setOnAction(event -> {
 
                     try {
+
                         URL resource = getClass().getResource(fileno.get(finalIdx));
                         if (resource == null) {
                             throw new IOException("FXML file not found: " );
@@ -77,6 +82,7 @@ public class User_Menu_Controller {
 
                         Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
                         currentScene.setRoot(root);
+
 
                     } catch (IOException e) {
                         e.printStackTrace();

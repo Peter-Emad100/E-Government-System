@@ -7,7 +7,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import java.util.List;
-
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 public class MinistryOfHealthAndPopulationController {
 
 
@@ -19,6 +25,21 @@ public class MinistryOfHealthAndPopulationController {
     private TextField QuantityIn;
 
     private MinistryOfHealthAndPopulation ministry;
+
+    @FXML
+    private void Backtomenu(ActionEvent event) {
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
 
     @FXML
     public void initialize() {

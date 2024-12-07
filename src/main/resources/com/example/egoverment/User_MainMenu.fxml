@@ -10,8 +10,11 @@
 <?import javafx.scene.control.Button?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.User_Menu_Controller">
     <children>
+
         <ScrollPane fx:id="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
             <content>
+
                 <FlowPane fx:id="flowPane" hgap="10.0" vgap="50.0" alignment="CENTER_LEFT"/>
 
             </content>
@@ -22,7 +25,7 @@
             </image>
         </ImageView>
         <!-- Log Out Button in the bottom-right corner -->
-        <Button text="Log Out" fx:id="logOutButton" layoutX="400.0" layoutY="450.0"
+        <Button text="Log Out" fx:id="logOutButton" layoutX="350.0" layoutY="450.0"
                 AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0"
                 prefWidth="90.0" prefHeight="25.6"
                 onAction="#HandleLogout" />

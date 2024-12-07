@@ -11,6 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.AddEmpController">
    <children>
+
       <ImageView fx:id="background" fitHeight="509.0" fitWidth="1087.0" layoutX="-184.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/pngtree-cream-colored.png" />
@@ -18,9 +19,13 @@
       </ImageView>
       <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="593.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assets/nesr.jpg" />
+            <Image url="@assets/nesr2.png" />
          </image>
       </ImageView>
+
+      <!-- Back Button -->
+      <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu"/>
+
       <Label layoutX="37.0" layoutY="33.0" text="Add Employee" underline="true">
          <font>
             <Font name="Bodoni MT Bold" size="48.0" />

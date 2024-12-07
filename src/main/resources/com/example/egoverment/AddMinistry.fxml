@@ -15,8 +15,8 @@
             <Image url="@assets/pngtree-cream-colored.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" text="←" />
-      <!--            <Button fx:id="BackButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="60.0" text="Back" />-->
+      <!-- Back Button -->
+      <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu" />
       <Label layoutX="49.0" layoutY="50.0" prefHeight="60.0" prefWidth="470.0" text="Add/Remove Ministry" underline="true">
          <font>
             <Font name="Bodoni MT Bold" size="48.0" />
@@ -33,7 +33,7 @@
       <Button fx:id="editMinistryButton" layoutX="243.0" layoutY="400.0" mnemonicParsing="false" onAction="#editMinistry" prefHeight="30.0" prefWidth="188.0" text="Edit Ministry" />
       <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="547.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assets/nesr.jpg" />
+            <Image url="@assets/nesr2.png" />
          </image>
       </ImageView>
    </children>

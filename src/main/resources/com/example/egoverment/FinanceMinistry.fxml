@@ -18,12 +18,16 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="262.0" text="Ministry of Finance:" underline="true">
+      <Label layoutX="31.0" layoutY="50.0" prefHeight="35.0" prefWidth="262.0" text="Ministry of Finance:" underline="true">
          <font>
             <Font name="Bodoni MT Bold" size="26.0" />
          </font>
       </Label>
-      <Button layoutX="56.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
+      <!-- Back Button -->
+      <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu"/>
+
+
+      <Button layoutX="56.0" layoutY="88.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
       <ImageView fitHeight="72.0" fitWidth="66.0" layoutX="603.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/nesr2.png" />

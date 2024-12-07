@@ -18,11 +18,17 @@
         </ImageView>
 
         <!-- Text label -->
-        <Text layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ministry of Education:" underline="true" wrappingWidth="313.4700622558594">
+        <Text layoutX="70.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ministry of Education:" underline="true" wrappingWidth="313.4700622558594">
             <font>
                 <Font name="Bodoni MT Bold" size="32.0" />
             </font>
         </Text>
+        <!-- Back Button -->
+        <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
 
         <!-- Primary Stage Button -->
         <Button layoutX="271.0" layoutY="213.0" mnemonicParsing="false" onAction="#showPrimaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Primary Stage" />
@@ -39,7 +45,8 @@
                 <Image url="@assets/education-logo.png" />
             </image>
         </ImageView>
-      <Button layoutX="80.0" layoutY="75.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
+        <!-- Department Button -->
+      <Button layoutX="80.0" layoutY="120.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
       <Text layoutX="208.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check last years' exams:" underline="true" wrappingWidth="284.6700744628906">
          <font>
             <Font name="Bodoni MT Bold" size="28.0" />

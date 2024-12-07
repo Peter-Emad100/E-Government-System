@@ -1,4 +1,3 @@
-///////////////////helloapplication
 package com.example.egoverment;
 
 import javafx.application.Application;
@@ -14,7 +13,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Loginer.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Owner_MainMenu.fxml"));
             Pane root = (Pane) loader.load();
             //Create a scene and set the stage
             System.out.println("in");

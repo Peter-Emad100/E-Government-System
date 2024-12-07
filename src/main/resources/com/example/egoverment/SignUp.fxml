@@ -36,7 +36,7 @@
       <TextField fx:id="userField" layoutX="128.0" layoutY="207.0" />
       <PasswordField fx:id="passwordField" layoutX="128.0" layoutY="242.0" />
       <PasswordField fx:id="rewritePasswordField" layoutX="128.0" layoutY="271.0" />
-      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoBack" text="Back Button" />
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoBack" text="Already have an account?" />
       <TextField fx:id="passwordVisibleField" layoutX="128.0" layoutY="242.0" />
       <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="234.0" layoutY="245.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
          <image>

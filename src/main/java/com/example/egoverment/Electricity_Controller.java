@@ -11,6 +11,13 @@ import java.time.YearMonth;
 import java.util.Optional;
 import java.time.LocalDate;
 import java.util.Random;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 public class Electricity_Controller {
 
@@ -19,6 +26,22 @@ public class Electricity_Controller {
     private boolean isPaid;
     private final LocalDate dueDate;
     private final double amount;
+
+
+    @FXML
+    private void Backtomenu(ActionEvent event) {
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
 
     public Electricity_Controller()
     {
