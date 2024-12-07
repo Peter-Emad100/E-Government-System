@@ -56,6 +56,23 @@ public class editMinistryController {
         String response = "Ministry name updated successfully!";
         showAlert(response);
         newMinistryNameField.clear();
+
+        // Close current stage (editMinistryController window)
+        Stage currentStage = (Stage) editMinistryButton.getScene().getWindow();
+        currentStage.close();
+
+        // Load the first controller (main window)
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddMinistry.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Add/Remove Ministry");  // Change the title as needed
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error loading the first controller.");
+        }
     }
 
     private void showAlert(String message) {
