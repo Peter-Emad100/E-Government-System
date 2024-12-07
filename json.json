@@ -76,6 +76,10 @@
     {
       "ministryName": "norhan",
       "departments": []
+    },
+    {
+      "ministryName": "testtt2",
+      "departments": []
     }
   ],
   "requests": [],

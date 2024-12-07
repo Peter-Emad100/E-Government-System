@@ -52,17 +52,13 @@ public class  MinistriesCollection {
         minis.remove(ministryToRemove); // Directly remove the object
     }
 
-
-    //        public static void remove(String name) {
-//            for (int i = 0; i < minis.size(); i++) {
-//                if (minis.get(i).getMinster().getName().equals(name)) {
-//                    minis.remove(i);
-//                    return;
-//                }
-//            }
-//        }
     public static void edit(String oldName, String newName) {
-
+        for (Ministry ministry : minis) {
+            if (ministry.getMinistryName().equalsIgnoreCase(oldName)) {
+                ministry.setMinistryName(newName);
+                return;
+            }
+        }
     }
     public static void prepareToSave () {
         FileHelper.prepareToSave(minis, savingName);

@@ -12,6 +12,10 @@ public class Ministry {
         return minister.getName();
     }
 
+    public void setMinistryName(String ministryName) {
+        this.ministryName = ministryName;
+    }
+
     public String getMinistryName() {
         return ministryName;
     }

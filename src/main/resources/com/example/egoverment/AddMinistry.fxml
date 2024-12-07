@@ -30,7 +30,7 @@
       <TextField fx:id="TextFieldAddMinistry" layoutX="205.0" layoutY="232.0" prefHeight="36.0" prefWidth="291.0" />
       <Button fx:id="AddMinistryButton" layoutX="111.0" layoutY="321.0" mnemonicParsing="false" onAction="#addMinistry" prefHeight="30.0" prefWidth="188.0" text="Add Ministry" />
       <Button fx:id="removeMinistryButton" layoutX="402.0" layoutY="321.0" mnemonicParsing="false" onAction="#removeMinistry" prefHeight="30.0" prefWidth="188.0" text="Remove Ministry" />
-      <Button fx:id="editMinistryButton" layoutX="243.0" layoutY="400.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="188.0" text="Edit Ministry" />
+      <Button fx:id="editMinistryButton" layoutX="243.0" layoutY="400.0" mnemonicParsing="false" onAction="#editMinistry" prefHeight="30.0" prefWidth="188.0" text="Edit Ministry" />
       <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="547.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/nesr.jpg" />
