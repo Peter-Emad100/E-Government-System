@@ -3,6 +3,7 @@ package com.example.egoverment;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -13,7 +14,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 
 public class Loginer_Controller {
 
@@ -77,11 +81,47 @@ public class Loginer_Controller {
         }
         if (UserCollection.search(email, password)) {
             showAlert("Success", "Login Successful!", AlertType.INFORMATION);
+
+            try {
+
+                URL resource = getClass().getResource("User_MainMenu.fxml");
+                if (resource == null) {
+                    throw new IOException("FXML file not found: " );
+                }
+
+                Parent root = FXMLLoader.load(resource);
+
+                Scene currentScene = ((Scene) ((javafx.scene.Node) actionEvent.getSource()).getScene());
+                currentScene.setRoot(root);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("Failed to load FXML. Check the file path.");
+            }
         } else if (OwnerCollection.search(email,password)) {
             showAlert("Success", "Login Successful!", AlertType.INFORMATION);
+            try {
+
+                URL resource = getClass().getResource("Owner_MainMenu.fxml");
+                if (resource == null) {
+                    throw new IOException("FXML file not found: " );
+                }
+
+                Parent root = FXMLLoader.load(resource);
+
+                Scene currentScene = ((Scene) ((javafx.scene.Node) actionEvent.getSource()).getScene());
+                currentScene.setRoot(root);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("Failed to load FXML. Check the file path.");
+            }
         }
         else{
             showAlert("failed", "failed!", AlertType.INFORMATION);
+
         }
     }
     @FXML

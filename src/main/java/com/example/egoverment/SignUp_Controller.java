@@ -1,7 +1,9 @@
 package com.example.egoverment;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -12,7 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -52,7 +56,7 @@ public class SignUp_Controller {
     }
 
     @FXML
-    private void SignUpAction() {
+    private void SignUpAction(ActionEvent actionEvent) {
         long nationalId=0;
         String name = nameField.getText();
          try{nationalId =Long.parseLong(idField.getText());}
@@ -82,6 +86,33 @@ public class SignUp_Controller {
             // Proceed with sign-up logic (e.g., saving data or interacting with a database)
             UserCollection.add(name,nationalId,username,password,mobileNumber,mail);
             showAlert("Success", "You have signed up successfully!", Alert.AlertType.INFORMATION);
+            nameField.clear();
+            idField.clear();
+            emailField.clear();
+            mobileField.clear();
+            userField.clear();
+            passwordField.clear();
+            passwordVisibleField.clear();
+            RepasswordVisibleField.clear();
+
+            try {
+
+                URL resource = getClass().getResource("Loginer.fxml");
+                if (resource == null) {
+                    throw new IOException("FXML file not found: " );
+                }
+
+                Parent root = FXMLLoader.load(resource);
+
+                Scene currentScene = ((Scene) ((javafx.scene.Node) actionEvent.getSource()).getScene());
+                currentScene.setRoot(root);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("Failed to load FXML. Check the file path.");
+            }
+
         }
     }
 
