@@ -30,7 +30,7 @@
         <Button fx:id="editMinistryButton" layoutX="243.0" layoutY="320.0" mnemonicParsing="false" onAction="#onRenameMinistry" prefHeight="30.0" prefWidth="188.0" text="Edit Ministry" />
         <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="547.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@assets/nesr.jpg" />
+                <Image url="@assets/nesr2.png" />
             </image>
         </ImageView>
     </children>
