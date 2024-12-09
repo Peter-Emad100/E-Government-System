@@ -72,6 +72,10 @@
         "id": 2
       },
       "departments": []
+    },
+    {
+      "ministryName": "ministry of ay haga",
+      "departments": []
     }
   ],
   "requests": [],
@@ -133,5 +137,5 @@
     }
   ],
   "NumberOfUsers": 4,
-  "NumberOfMinistries": 7
+  "NumberOfMinistries": 8
 }

@@ -40,6 +40,7 @@
       </Text>
       <ComboBox fx:id="formIn" layoutX="313.0" layoutY="289.0" prefWidth="150.0" promptText="Select form" />
       <Button fx:id="loadFormsButton" layoutX="312.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#handleLoadRequestPage" prefHeight="38.0" prefWidth="76.0" style="-fx-background-radius: 10;" text="OK" />
-      <Button fx:id="bckbutton" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" text="←" />
+      <!-- Back Button -->
+      <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="30.0" prefWidth="70.0" text="←" />
    </children>
 </AnchorPane>
