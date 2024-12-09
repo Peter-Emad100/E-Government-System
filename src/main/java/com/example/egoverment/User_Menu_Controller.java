@@ -16,7 +16,7 @@ import java.util.List;
 public class User_Menu_Controller {
     @FXML
     private FlowPane flowPane;
-
+    public static String ministryName_controller;
 
 
     @FXML
@@ -77,6 +77,7 @@ public class User_Menu_Controller {
                         if (resource == null) {
                             throw new IOException("FXML file not found: " );
                         }
+                        ministryName_controller = ministryName;
 
                         Parent root = FXMLLoader.load(resource);
 
@@ -95,6 +96,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
+                        ministryName_controller = ministryName;
                         Parent root = FXMLLoader.load(getClass().getResource("put department fxml file page url"));
 
                         // Get the current stage from the event source

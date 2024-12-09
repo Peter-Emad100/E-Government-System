@@ -24,10 +24,10 @@
          </font>
       </Label>
       <!-- Back Button -->
-      <Button layoutX="14.0" layoutY="14.0"  prefHeight="0" prefWidth="70.0" text="←" onAction="#Backtomenu"/>
+      <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="0" prefWidth="70.0" text="←" />
 
 
-      <Button layoutX="56.0" layoutY="88.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
+      <Button layoutX="56.0" layoutY="88.0" mnemonicParsing="false" onAction="#reroot" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
       <ImageView fitHeight="72.0" fitWidth="66.0" layoutX="603.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/nesr2.png" />

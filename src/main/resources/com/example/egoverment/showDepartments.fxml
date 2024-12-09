@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.showDepartmentsController">
+   <children>
+      <ImageView fitHeight="669.0" fitWidth="1089.0" layoutX="-48.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/pngtree-cream-colored.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c0d0dd" height="70.0" layoutX="-4.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="708.0" />
+      <ImageView fitHeight="67.0" fitWidth="43.0" layoutX="602.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/nesr2.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="98.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departments" wrappingWidth="318.6484375">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="departmentIn" layoutX="313.0" layoutY="167.0" prefWidth="150.0" promptText="Select department" />
+      <Text layoutX="185.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="190.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Form:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="formIn" layoutX="313.0" layoutY="289.0" prefWidth="150.0" promptText="Select form" />
+      <Button fx:id="loadFormsButton" layoutX="312.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#handleLoadRequestPage" prefHeight="38.0" prefWidth="76.0" style="-fx-background-radius: 10;" text="OK" />
+      <Button fx:id="bckbutton" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" text="←" />
+   </children>
+</AnchorPane>
