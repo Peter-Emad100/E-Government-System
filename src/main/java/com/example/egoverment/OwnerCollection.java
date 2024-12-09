@@ -6,7 +6,7 @@ public class OwnerCollection {
     public void add(String name, int id, String loginName, String hashedPassword,String mail){
         genericLoginerCollec.subLoginers.add(new Owner(name,id,loginName,hashedPassword,mail));
     }
-    public static void prepareToSave(){
+    public static void prepareOwnersToSave(){
         FileHelper.prepareToSave(genericLoginerCollec.subLoginers,savingName);
     }
     public static  void retrieve(){

@@ -72,22 +72,48 @@
         "id": 2
       },
       "departments": []
-    },
-    {
-      "ministryName": "norhan",
-      "departments": []
     }
   ],
   "requests": [],
-  "owners": [],
+  "owners": [
+    {
+      "loginName": "the_revenant",
+      "Password": "73a203eb0d4e28df4d344d7625d9fa3f28ce6e2005763f65992f6ad02fdfc159",
+      "mail": "leo@gmail.com",
+      "name": "Leonardo DiCaprio",
+      "id": 78901234567890
+    },
+    {
+      "loginName": "hokage7th",
+      "Password": "4eef89854a16dd930d69a312317b90cbe8144ad40a7ff687bd4e1cc981a673ab",
+      "mail": "naruto@leaf.com",
+      "name": "Naruto Uzumaki",
+      "id": 19283746509123
+    },
+    {
+      "loginName": "ironman_rdj",
+      "Password": "74f8f86958713663343133e5198a8748cc5d8f871037167b00815acb03b98172",
+      "mail": "rdj@gmail.com",
+      "name": "Robert Downey",
+      "id": 56473829103456
+    }
+  ],
   "users": [
     {
-      "phone": "01555555555",
-      "loginName": "fun fun",
-      "Password": "97cd6f41e058cc626d03886718d150a0a3d87b1bbcd8213bf5a7edd2f0db69bd",
-      "mail": "fun@gmail.com",
-      "name": "fun",
-      "id": 55555555555555
+      "phone": "01123456789",
+      "loginName": "blackwidow",
+      "Password": "3e1812f46b43b7547cb694089d8fd56a43f60637e6a3f65ae70a9834239b240a",
+      "mail": "scarlett@avengers.com",
+      "name": "Scarlett Johansson",
+      "id": 98765432109876
+    },
+    {
+      "phone": "01055667788",
+      "loginName": "ethan_hunt",
+      "Password": "94dd513d06ade4fd499f34b7f60820be98ac224307a5f9438d8950612885b57a",
+      "mail": "tom@gmail.com",
+      "name": "Tom Cruise",
+      "id": 78901234567890
     },
     {
       "phone": "01123456789",
@@ -105,5 +131,7 @@
       "name": "noha",
       "id": 12345678912345
     }
-  ]
+  ],
+  "NumberOfUsers": 4,
+  "NumberOfMinistries": 7
 }

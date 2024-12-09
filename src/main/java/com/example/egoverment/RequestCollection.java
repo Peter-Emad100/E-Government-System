@@ -18,7 +18,7 @@ public class RequestCollection {
         requests.add(new Request("c","c","c","c","c","c",true));
         requests.add(new Request("c","c","c","c","c","c",true));
     }*/
-    public static void prepareToSave(){
+    public static void prepareRequestsToSave(){
         FileHelper.prepareToSave(requests,savingName);
     }
     public static void retrieve(){

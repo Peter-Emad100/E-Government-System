@@ -10,7 +10,7 @@ public class UserCollection  {
         genericLoginerCollec.subLoginers.add(new User(name,id,loginName,hashedPassword,phone,mail));
         System.out.println("happy signup");
     }
-    public static void prepareToSave(){
+    public static void prepareUsersToSave(){
         FileHelper.prepareToSave(genericLoginerCollec.subLoginers,savingName);
     }
     public static void retrieve(){

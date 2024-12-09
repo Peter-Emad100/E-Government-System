@@ -60,7 +60,7 @@ public class  MinistriesCollection {
             }
         }
     }
-    public static void prepareToSave () {
+    public static void prepareMinistriesToSave () {
         FileHelper.prepareToSave(minis, savingName);
     }
     public static void retrieve () {
