@@ -46,7 +46,7 @@ public class showDepartmentsController {
             System.out.println("No departments available for this ministry.");
         }
 
-        // Add a listener to the department ComboBox once selected a department it shows the forms inside it automatically
+        // Add a listener to the department ComboBox
         departmentIn.valueProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -57,10 +57,10 @@ public class showDepartmentsController {
         });
     }
     private void populateFormsComboBox(String departmentName) {
-        formIn.getItems().clear(); // Clear previous forms shown once selecting another department
+        formIn.getItems().clear(); // Clear previous forms
         for (Department department : departments) {
             if (department.getDepartmentName().equals(departmentName)) {
-                for (Form form : department.forms) {
+                for (Form form : department.forms) { // Assuming forms is a public field in Department
                     formIn.getItems().add(form.getFormName());
                 }
                 break;
@@ -110,7 +110,7 @@ public class showDepartmentsController {
 
         initializeDepartments(); // Initialize departments on page load
     }
-//Alerts helper
+
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
