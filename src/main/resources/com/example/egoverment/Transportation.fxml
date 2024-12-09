@@ -49,6 +49,7 @@
                   <Image url="@assets/6.jpg" />
                </image>
             </ImageView>
+            <Button layoutX="168.0" layoutY="9.0" mnemonicParsing="false" onAction="#reroot" prefHeight="35.0" prefWidth="134.0" text="Visit Departments" />
              </children>
           </AnchorPane>
        </content>

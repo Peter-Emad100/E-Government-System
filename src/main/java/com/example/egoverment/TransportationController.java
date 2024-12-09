@@ -9,6 +9,22 @@ import javafx.scene.image.ImageView;
 
 public class TransportationController {
 
+    @FXML
+    private void reroot(ActionEvent event)
+    {
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("showDepartments.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
+
 
 
     @FXML

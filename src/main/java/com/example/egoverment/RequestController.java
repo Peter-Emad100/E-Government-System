@@ -6,7 +6,7 @@ import javafx.scene.input.MouseEvent;
 import java.time.LocalDate;
 
 public class RequestController {
-    String formName="Change SSN";
+    String formName=showDepartmentsController.selectedForm;
 
     private int lengthofArrRequest;
 
