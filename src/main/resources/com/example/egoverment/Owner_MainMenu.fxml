@@ -4,28 +4,50 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Owner_Menu_Controller">
     <children>
+
+        <!--backgroung image-->
         <ImageView fitHeight="509.0" fitWidth="1087.0" layoutX="-188.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@assets/pngtree-cream-colored.png" />
             </image>
         </ImageView>
 
+        <!-- v box to display number of ministries and no. of users-->
+
+        <VBox layoutX="30.0" layoutY="30.0" spacing="10">
+            <Label fx:id="ministriesCountLabel" text="Number of Ministries: 0">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+            <Label fx:id="usersCountLabel" text="Number of Users: 0">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+        </VBox>
+
         <!-- manage ministry Button -->
-        <Button layoutX="260.0" layoutY="100.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" text="Manage Ministry" onAction="#handleManageMinistryButtonAction"/>
+        <Button layoutX="86.0" layoutY="142.0" mnemonicParsing="false" onAction="#handleManageMinistryButtonAction" prefHeight="44.0" prefWidth="157.0" text="Manage Ministry" />
 
         <!-- add empButton -->
-        <Button layoutX="260.0" layoutY="200.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" text="Add Employee" onAction="#handleAddEmployeeButtonAction"/>
+        <Button layoutX="86.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleAddEmployeeButtonAction" prefHeight="44.0" prefWidth="157.0" text="Add Employee" />
 
         <!-- remove emp Button -->
-        <Button layoutX="260.0" layoutY="300.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" text="Remove Employee" onAction="#handleRemoveEmployeeButtonAction"/>
+        <Button layoutX="355.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleRemoveEmployeeButtonAction" prefHeight="44.0" prefWidth="157.0" text="Remove Employee" />
 
         <!-- manage form Button -->
-        <Button layoutX="260.0" layoutY="400.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" text="Manage Forms" onAction="#handlemanageFormButtonAction"/>
-
+        <Button layoutX="355.0" layoutY="142.0" mnemonicParsing="false" onAction="#handleManageFormButtonAction" prefHeight="44.0" prefWidth="157.0" text="Manage Forms" />
+        <!-- Add Departments Button -->
+        <Button layoutX="86.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleAddDepartmentButtonAction" prefHeight="44.0" prefWidth="157.0" text="Add Departments" />
+        <!-- Remove Departments Button -->
+        <Button layoutX="355.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleRemoveDepartmentButtonAction" prefHeight="44.0" prefWidth="157.0" text="Remove Departments" />
 
         <!-- Top-Right Image -->
         <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="560.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
@@ -35,9 +57,7 @@
         </ImageView>
 
         <!-- Log Out Button in the bottom-right corner -->
-        <Button text="Log Out" fx:id="logOutButton" layoutX="400.0" layoutY="450.0"
-                AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0"
-                prefWidth="90.0" prefHeight="25.6" onAction="#HandleLogout"/>
+        <Button fx:id="logOutButton" layoutX="400.0" layoutY="450.0" onAction="#HandleLogout" prefHeight="25.6" prefWidth="90.0" text="Log Out" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+
     </children>
 </AnchorPane>
-

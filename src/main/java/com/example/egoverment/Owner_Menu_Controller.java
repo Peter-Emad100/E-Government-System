@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-
+import javafx.scene.control.Label;
 import java.io.IOException;
 import java.net.URL;
 
@@ -28,6 +28,28 @@ public class Owner_Menu_Controller {
         private Button logOutButton;
         @FXML
         private ImageView topImageView;
+
+
+    @FXML
+    private Label ministriesCountLabel;
+
+    @FXML
+    private Label usersCountLabel;
+
+    // initialize no. of ministries and users
+    @FXML
+    public void initialize() {
+        // Retrieve the number of ministries from the MinistryCollection
+        int numberOfMinistries = Ministry.numberOfMinistries;
+
+        // Retrieve the number of users directly from User class
+        int numberOfUsers = User.numberOfUsers;
+
+        // Update the labels
+        ministriesCountLabel.setText("Number of Ministries: " + numberOfMinistries);
+        usersCountLabel.setText("Number of Users: " + numberOfUsers);
+    }
+
 
         // Action handler for 'Manage Ministry' button
         @FXML
@@ -102,11 +124,11 @@ public class Owner_Menu_Controller {
 
         // Action handler for 'Add Form' button
         @FXML
-        private void handlemanageFormButtonAction(ActionEvent event) {
+        private void handleManageFormButtonAction(ActionEvent event) {
 
             try {
 
-                URL resource = getClass().getResource("AddForm.fxml");// put right one later
+                URL resource = getClass().getResource("FormPage.fxml");
                 if (resource == null) {
                     throw new IOException("FXML file not found: " );
                 }
@@ -124,6 +146,53 @@ public class Owner_Menu_Controller {
 
         }
 
+    // Action handler for 'Add Department' button
+    @FXML
+    private void handleAddDepartmentButtonAction(ActionEvent event) {
+
+        try {
+
+            URL resource = getClass().getResource("AddDepartment.fxml");
+            if (resource == null) {
+                throw new IOException("FXML file not found: " );
+            }
+
+            Parent root = FXMLLoader.load(resource);
+
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+
+    }
+
+    // Action handler for 'Remove Department' button
+    @FXML
+    private void handleRemoveDepartmentButtonAction(ActionEvent event) {
+
+        try {
+
+            URL resource = getClass().getResource("removeDepartment.fxml");
+            if (resource == null) {
+                throw new IOException("FXML file not found: " );
+            }
+
+            Parent root = FXMLLoader.load(resource);
+
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+
+    }
 
 
     @FXML

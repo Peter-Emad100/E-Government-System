@@ -25,6 +25,7 @@ public class  MinistriesCollection {
 
     public static void remove(Ministry ministryToRemove) {
         minis.remove(ministryToRemove); // Directly remove the object
+        Ministry.numberOfMinistries--;  // update no. of ministries
     }
 
     public static void edit(String oldName, String newName) {

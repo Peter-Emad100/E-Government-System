@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("User_MainMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Loginer.fxml"));
             Pane root = (Pane) loader.load();
             //Create a scene and set the stage
             System.out.println("in");
@@ -42,6 +42,7 @@ public class HelloApplication extends Application {
     //        primaryStage.show();
     //    }
     public static void main (String[] args){
+
         FileHelper.retrieveAll();
         launch(args);
         //        ArrayList<Ministry> ministries= new ArrayList<>();

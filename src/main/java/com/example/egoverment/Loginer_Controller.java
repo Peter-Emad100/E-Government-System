@@ -56,27 +56,39 @@ public class Loginer_Controller {
 
         if (email.isEmpty()) {
             showAlert("Invalid Email", "Username must not be empty.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
         if (!email.contains(".com") || !email.contains("@")) {
             showAlert("Invalid Username", "Username must contain '@gmail.com'.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
 
         if (password.isEmpty()) {
             showAlert("Invalid Password", "Password must not be empty.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
         if (password.length() < 8) {
             showAlert("Invalid Password", "Password must be at least 8 characters long.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
         if (!password.matches(".*[0-9].*")) {
             showAlert("Invalid Password", "Password must contain at least one number.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
         if (!password.matches(".*[!@#$%^&*()].*")) {
             showAlert("Invalid Password", "Password must contain at least one special character.", AlertType.ERROR);
+            passwordField.clear();
+            emailField.clear();
             return;
         }
         if (UserCollection.search(email, password)) {
@@ -99,6 +111,10 @@ public class Loginer_Controller {
                 e.printStackTrace();
                 System.out.println("Failed to load FXML. Check the file path.");
             }
+            finally{
+                passwordField.clear();
+                emailField.clear();
+            }
         } else if (OwnerCollection.search(email,password)) {
             showAlert("Success", "Login Successful!", AlertType.INFORMATION);
             try {
@@ -118,9 +134,15 @@ public class Loginer_Controller {
                 e.printStackTrace();
                 System.out.println("Failed to load FXML. Check the file path.");
             }
+            finally {
+                passwordField.clear();
+                emailField.clear();
+            }
         }
         else{
             showAlert("failed", "failed!", AlertType.INFORMATION);
+            passwordField.clear();
+            emailField.clear();
 
         }
     }
