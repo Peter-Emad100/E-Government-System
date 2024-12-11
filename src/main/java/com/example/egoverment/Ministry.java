@@ -3,8 +3,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Ministry {
-    static int numberOfMinistries;
-    String ministryName;
+    protected static int numberOfMinistries;
+    private String ministryName;
     private Minister minister;
     protected ArrayList<Department> departments;
 

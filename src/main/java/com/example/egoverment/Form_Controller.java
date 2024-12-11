@@ -72,7 +72,7 @@ public class Form_Controller {
                         if (department.getDepartmentName().equalsIgnoreCase(departmentName)) {
 
                             // Check if form already exists in the department
-                            for (Form form : department.getforms()) {
+                            for (Form form : department.getForms()) {
                                 if (form.getFormName().equalsIgnoreCase(formName)) {
                                     showAlert(Alert.AlertType.WARNING, "Duplicate Form", "Form already exists", "The form you are trying to add already exists!");
                                     return;
@@ -83,10 +83,10 @@ public class Form_Controller {
                             Form newForm = new Form(formName);
 
                             // Add form to the department's forms list
-                            if (department.getforms() == null) {
+                            if (department.getForms() == null) {
                                 department.setForms(new ArrayList<>());
                             }
-                            department.getforms().add(newForm);
+                            department.getForms().add(newForm);
 
                             // Success message after form is added
                             showAlert(Alert.AlertType.INFORMATION, "Success", "Form Added", "The form was added successfully!");
@@ -121,7 +121,7 @@ public class Form_Controller {
                 for (Department department : ministry.getDepartments()) {
                     if (department.getDepartmentName().equalsIgnoreCase(departmentName)) {
                         // Use the instance method `getForms()` to check for the form
-                        for (Form form : department.getforms()) {
+                        for (Form form : department.getForms()) {
                             if (form.getFormName().equalsIgnoreCase(formName)) {
                                 department.removeForm(formName); // Remove the form using the method in Department
                                 showAlert(Alert.AlertType.INFORMATION, "Success", "Form Removed", "The form was removed successfully!");

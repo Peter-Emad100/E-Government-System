@@ -1,5 +1,4 @@
 package com.example.egoverment;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -11,7 +10,7 @@ public class MinistryOfHealthAndPopulation extends Ministry
         super(name);
         super.departments=new ArrayList<>();
         super.addDepartmentsToMinistry("Department of Blood Banks");
-        super.departments.get(0).addFormtoDepartment("Search For Blood Banks");
+        super.departments.get(0).addFormToDepartment("Search For Blood Banks");
         this.bloodBanks = new ArrayList<>();
     }
     public void addBloodBank(String location, List<BloodBag> bloodBags) {

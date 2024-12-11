@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Department {
     private String departmentName;
     private ArrayList<Employee> employees;
-    public  ArrayList<Form> forms;
+    protected  ArrayList<Form> forms;
 
 
     public Department(String departmentName) {
@@ -13,7 +13,7 @@ public class Department {
         this.forms = new ArrayList<Form>();
     }
 
-    public ArrayList<Form> getforms() {
+    public ArrayList<Form> getForms() {
         return forms;
     }
     // Setter for forms
@@ -44,7 +44,7 @@ public class Department {
         return employees.removeIf(emp -> emp.getId() == employeeId);
     }
 
-    public void addFormtoDepartment(String formName) {
+    public void addFormToDepartment(String formName) {
         forms.add(new Form(formName));
     }
 

@@ -15,7 +15,6 @@ import com.google.gson.stream.JsonReader;
 
 import java.lang.reflect.Type;
 public class  MinistriesCollection {
-    private static int i = 0;
     private final static String savingName="ministries";
     private static ArrayList<Ministry> minis = new ArrayList<Ministry>();
 

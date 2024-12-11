@@ -2,7 +2,7 @@ package com.example.egoverment;
 
 public class OwnerCollection {
     private final static String savingName="owners";
-    static GenericLoginerCollec<Owner> genericLoginerCollec=new GenericLoginerCollec<Owner>();
+    private static GenericLoginerCollec<Owner> genericLoginerCollec=new GenericLoginerCollec<Owner>();
     public void add(String name, int id, String loginName, String hashedPassword,String mail){
         genericLoginerCollec.subLoginers.add(new Owner(name,id,loginName,hashedPassword,mail));
     }

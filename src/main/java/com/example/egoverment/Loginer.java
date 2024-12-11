@@ -14,13 +14,13 @@ public class Loginer extends Human {
         this.mail=mail;
     }
 
-    protected String getLoginName() {
+    public String getLoginName() {
         return loginName;
     }
     public String getMail() {
         return mail;
     }
-    protected String getPassword() {
+    public String getPassword() {
         return Password;
     }
 
