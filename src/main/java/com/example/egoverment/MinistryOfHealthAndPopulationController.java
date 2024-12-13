@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+
+import java.util.Arrays;
 import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -59,14 +61,13 @@ public class MinistryOfHealthAndPopulationController {
         }
     }
 
-    @FXML
-    public void initialize() {
-        BloodTypeIn.setValue(BloodType.A_POS);
-        BloodTypeIn.getItems().addAll(BloodType.values());
-    }
-    public void setMinistry(MinistryOfHealthAndPopulation ministry) {
-        this.ministry = ministry;
-    }
+
+
+
+
+
+
+
 
     @FXML
     void searchBloodBanksOnClick(MouseEvent event) {
@@ -99,7 +100,7 @@ public class MinistryOfHealthAndPopulationController {
             }
 
 
-            List<BloodBank> matchingBanks = ministry.searchBloodBanks(selectedType, requiredQuantity);
+            List<BloodBank> matchingBanks = MinistryOfHealthAndPopulation.searchBloodBanks(selectedType, requiredQuantity);
 
 
             if (matchingBanks.isEmpty()) {
@@ -124,5 +125,32 @@ public class MinistryOfHealthAndPopulationController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @FXML
+    public void initialize() {
+        BloodTypeIn.setValue(BloodType.A_POS);
+        BloodTypeIn.getItems().addAll(BloodType.values());
+
+        MinistryOfHealthAndPopulation healthMinistry = new MinistryOfHealthAndPopulation("Ministry of Health And Population");
+
+
+        BloodBag bag1 = new BloodBag(BloodType.A_POS, 10);
+        BloodBag bag2 = new BloodBag(BloodType.B_NEG, 5);
+        BloodBag bag3 = new BloodBag(BloodType.O_NEG, 7);
+        BloodBag bag4 = new BloodBag(BloodType.A_NEG, 4);
+        BloodBag bag5 = new BloodBag(BloodType.A_POS, 8);
+
+        BloodBank bank1 = new BloodBank("Abbasyia BloodBank", Arrays.asList(bag1, bag2));
+        BloodBank bank2 = new BloodBank("Nasr City Hospital", Arrays.asList(bag3, bag5));
+        BloodBank bank3 = new BloodBank("Al Mohandeseen Clinic", Arrays.asList(bag4));
+
+        healthMinistry.addBloodBank(bank1.getLocation(), bank1.getAvailableBloodBags());
+        healthMinistry.addBloodBank(bank2.getLocation(), bank2.getAvailableBloodBags());
+        healthMinistry.addBloodBank(bank3.getLocation(), bank3.getAvailableBloodBags());
+
+
+
+    }
+
 
 }

@@ -1,23 +1,22 @@
 package com.example.egoverment;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class MinistryOfHealthAndPopulation extends Ministry
-{
-    private List<BloodBank> bloodBanks;
-    public MinistryOfHealthAndPopulation(String name)
-    {
-        super(name);
-        super.departments=new ArrayList<>();
-        super.addDepartmentsToMinistry("Department of Blood Banks");
-        super.departments.get(0).addFormToDepartment("Search For Blood Banks");
+public class MinistryOfHealthAndPopulation {
+    private String name;
+    private static List<BloodBank> bloodBanks;
+
+    public MinistryOfHealthAndPopulation(String name) {
+        this.name = name;
         this.bloodBanks = new ArrayList<>();
     }
+
     public void addBloodBank(String location, List<BloodBag> bloodBags) {
         bloodBanks.add(new BloodBank(location, bloodBags));
     }
 
-    public List<BloodBank> searchBloodBanks(BloodType bloodType, int requiredQuantity) {
+    public static List<BloodBank>  searchBloodBanks(BloodType bloodType, int requiredQuantity) {
         List<BloodBank> matchingBanks = new ArrayList<>();
 
         for (BloodBank bloodBank : bloodBanks) {
@@ -31,13 +30,12 @@ public class MinistryOfHealthAndPopulation extends Ministry
 
         return matchingBanks;
     }
+
     public List<BloodBank> getBloodBanks() {
         return bloodBanks;
     }
 
-
-
-
-
-
+    public String getName() {
+        return name;
+    }
 }

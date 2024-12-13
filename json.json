@@ -46,23 +46,13 @@
       "departments": []
     },
     {
-      "ministryName": "Ministry of Health and population",
+      "ministryName": "Ministry of Health And Population",
       "minister": {
         "startingDate": "2024-12-05",
         "name": "Ahmed Saeed Kilani",
         "id": 2
       },
-      "departments": [
-        {
-          "departmentName": "Department of Blood Banks",
-          "employees": [],
-          "forms": [
-            {
-              "formName": "Search For Blood Banks"
-            }
-          ]
-        }
-      ]
+      "departments": []
     },
     {
       "ministryName": "Ministry Of Tourism",

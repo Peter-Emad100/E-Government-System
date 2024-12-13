@@ -148,7 +148,7 @@ public class User_Menu_Controller {
                 });
 
             }
-            else if(ministryName.equals("Ministry of Health and population")) {
+            else if(ministryName.equals("Ministry of Health And Population")) {
                 ministryButton.setOnAction(event -> {
 
                     try {
