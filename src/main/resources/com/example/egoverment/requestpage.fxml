@@ -14,11 +14,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.RequestController">
     <children>
-        <AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="725.0">
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
             <children>
                 <AnchorPane layoutX="7.0" layoutY="110.0">
                     <children>
-                        <ImageView fitHeight="439.0" fitWidth="710.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="439.0" fitWidth="710.0" layoutX="-10.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@assets/backrequest.jpg" />
                             </image>
@@ -26,7 +26,7 @@
                                 <BoxBlur iterations="0" width="0.0" />
                             </effect>
                         </ImageView>
-                        <Button fx:id="submitButton" layoutX="280.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#SubmitRequest" prefHeight="40.0" prefWidth="150.0" text="Submit Request" />
+                        <Button fx:id="submitButton" layoutX="275.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#SubmitRequest" prefHeight="26.0" prefWidth="150.0" text="Submit Request" />
                         <TextField fx:id="nameField" layoutX="85.0" layoutY="36.0" />
                         <TextField fx:id="idField" layoutX="85.0" layoutY="92.0" />
                         <TextField fx:id="addressField" layoutX="85.0" layoutY="224.0" />
@@ -45,17 +45,17 @@
                         <Label layoutX="449.0" layoutY="49.0" text="Gender:" />
                     </children>
                 </AnchorPane>
-                <Label layoutX="300.0" layoutY="30.0" text="Request">
+                <Label layoutX="295.0" layoutY="30.0" text="Request">
                     <font>
                         <Font size="35.0" />
                     </font>
                 </Label>
-                <ImageView fitHeight="74.0" fitWidth="78.0" layoutX="624.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="64.0" fitWidth="48.0" layoutX="619.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@assets/nesr.jpg" />
+                        <Image url="@assets/nesr2.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="bckbutton" layoutX="17.0" layoutY="46.0" mnemonicParsing="false" text="←" />
+                <Button fx:id="bckbutton" layoutX="17.0" layoutY="46.0" mnemonicParsing="false" onAction="#Backtomenu" text="←" />
             </children>
         </AnchorPane>
     </children>

@@ -6,47 +6,51 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.SignUp_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.SignUp_Controller">
    <children>
-      <ImageView fitHeight="412.0" fitWidth="607.0" layoutX="-1.0" layoutY="-4.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="549.0" fitWidth="769.0" layoutX="-1.0" layoutY="-4.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/blue.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="367.0" fitWidth="271.0" layoutX="331.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <Text layoutX="110.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up/Register">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="50.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <Text layoutX="36.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National ID:" />
+      <Text layoutX="52.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="24.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number:" />
+      <Text layoutX="39.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+      <Text layoutX="40.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Text layoutX="16.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-write Password:" />
+      <Button layoutX="173.0" layoutY="411.0" mnemonicParsing="false" onAction="#SignUpAction" text="Sign Up" />
+      <TextField fx:id="nameField" layoutX="128.0" layoutY="115.0" />
+      <TextField fx:id="idField" layoutX="128.0" layoutY="157.0" />
+      <TextField fx:id="emailField" layoutX="127.0" layoutY="198.0" />
+      <TextField fx:id="mobileField" layoutX="128.0" layoutY="239.0" />
+      <TextField fx:id="userField" layoutX="128.0" layoutY="283.0" />
+      <PasswordField fx:id="passwordField" layoutX="128.0" layoutY="329.0" />
+      <PasswordField fx:id="rewritePasswordField" layoutX="128.0" layoutY="370.0" />
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoBack" text="Already have an account?" />
+      <TextField fx:id="passwordVisibleField" layoutX="127.0" layoutY="329.0" />
+      <ImageView fitHeight="16.0" fitWidth="22.0" layoutX="251.0" layoutY="334.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/pass.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="RepasswordVisibleField" layoutX="128.0" layoutY="370.0" />
+      <ImageView fitHeight="16.0" fitWidth="22.0" layoutX="251.0" layoutY="374.0" onMouseClicked="#toggleRePasswordVisibility" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/repass.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="373.0" fitWidth="247.0" layoutX="406.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/3.jpg" />
-         </image>
-      </ImageView>
-      <Text layoutX="128.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up/Register" />
-      <Text layoutX="50.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
-      <Text layoutX="36.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National ID:" />
-      <Text layoutX="52.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-      <Text layoutX="24.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number:" />
-      <Text layoutX="39.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
-      <Text layoutX="41.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
-      <Text layoutX="17.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-write Password:" />
-      <Button layoutX="128.0" layoutY="336.0" mnemonicParsing="false" onAction="#SignUpAction" text="Sign Up" />
-      <TextField fx:id="nameField" layoutX="128.0" layoutY="93.0" />
-      <TextField fx:id="idField" layoutX="128.0" layoutY="124.0" />
-      <TextField fx:id="emailField" layoutX="128.0" layoutY="150.0" />
-      <TextField fx:id="mobileField" layoutX="128.0" layoutY="179.0" />
-      <TextField fx:id="userField" layoutX="128.0" layoutY="207.0" />
-      <PasswordField fx:id="passwordField" layoutX="128.0" layoutY="242.0" />
-      <PasswordField fx:id="rewritePasswordField" layoutX="128.0" layoutY="271.0" />
-      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoBack" text="Already have an account?" />
-      <TextField fx:id="passwordVisibleField" layoutX="128.0" layoutY="242.0" />
-      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="234.0" layoutY="245.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assets/pass.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="RepasswordVisibleField" layoutX="128.0" layoutY="271.0" />
-      <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="248.0" layoutY="274.0" onMouseClicked="#toggleRePasswordVisibility" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assets/repass.png" />
          </image>
       </ImageView>
    </children>

@@ -1,5 +1,9 @@
 package com.example.egoverment;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
@@ -44,6 +48,21 @@ public class RequestController {
     private Button submitButton;
 
     private boolean gendertype;
+
+    @FXML
+    private void Backtomenu(ActionEvent event) {
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
 
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);

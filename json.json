@@ -7,7 +7,28 @@
         "name": "someone",
         "id": 2
       },
-      "departments": []
+      "departments": [
+        {
+          "departmentName": "Civil Rights",
+          "employees": [
+            {
+              "startingDate": "2024-12-14",
+              "name": "Ahmed Elsayed",
+              "id": 202311
+            },
+            {
+              "startingDate": "2024-12-14",
+              "name": "sayed",
+              "id": 11111
+            }
+          ],
+          "forms": [
+            {
+              "formName": "civil rights"
+            }
+          ]
+        }
+      ]
     },
     {
       "ministryName": "Ministry of Education",
@@ -16,7 +37,26 @@
         "name": "Daniel Zeichner",
         "id": 2
       },
-      "departments": []
+      "departments": [
+        {
+          "departmentName": "Universities",
+          "employees": [],
+          "forms": [
+            {
+              "formName": "Ain shams University"
+            }
+          ]
+        },
+        {
+          "departmentName": "Schools",
+          "employees": [],
+          "forms": [
+            {
+              "formName": "Primary Stage"
+            }
+          ]
+        }
+      ]
     },
     {
       "ministryName": "Ministry of Finance",
@@ -52,7 +92,20 @@
         "name": "Ahmed Saeed Kilani",
         "id": 2
       },
-      "departments": []
+      "departments": [
+        {
+          "departmentName": "Population health",
+          "employees": [],
+          "forms": [
+            {
+              "formName": "Children\u0027s health"
+            },
+            {
+              "formName": "Women\u0027s Health"
+            }
+          ]
+        }
+      ]
     },
     {
       "ministryName": "Ministry Of Tourism",
@@ -62,9 +115,23 @@
         "id": 2
       },
       "departments": []
+    },
+    {
+      "ministryName": "Ministry of BlaBla",
+      "departments": []
     }
   ],
-  "requests": [],
+  "requests": [
+    {
+      "formName": "Ain shams University",
+      "notices": "Want to get metro card",
+      "location": "NasrCity, Egypt",
+      "birthDate": "2004-12-01",
+      "id": "202317000",
+      "name": "Esraa Ahmed Mohamed",
+      "gender": false
+    }
+  ],
   "owners": [
     {
       "loginName": "the_revenant",
@@ -120,8 +187,24 @@
       "mail": "noha@gmail.com",
       "name": "noha",
       "id": 12345678912345
+    },
+    {
+      "phone": "01204884649",
+      "loginName": "farahmo",
+      "Password": "561b92b305d3aa00053fead5746a3458a72f0b360170c1c23d2abc24e6573cab",
+      "mail": "farah@yahoo.com",
+      "name": "Farah Mohamed",
+      "id": 30101552102148
+    },
+    {
+      "phone": "01021494935",
+      "loginName": "farida",
+      "Password": "6b5803a6c422bb2c58a0c6d0187723f8821218dee5858a069aa5ccc1043a2b7a",
+      "mail": "farida@gmail.com",
+      "name": "Farida Qamar",
+      "id": 30505152112148
     }
   ],
-  "NumberOfUsers": 4,
-  "NumberOfMinistries": 7
+  "NumberOfUsers": 6,
+  "NumberOfMinistries": 8
 }
