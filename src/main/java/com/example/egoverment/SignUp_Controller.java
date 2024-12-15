@@ -210,9 +210,21 @@ public class SignUp_Controller {
     }
 
     @FXML
-    private void GoBack() {
-        Stage currentStage = (Stage) nameField.getScene().getWindow();
-        PageSwitchHelper.switcher("Loginer.fxml","Login",currentStage);
+    private void GoBack(ActionEvent event) {
+
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("Loginer.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+
+        }
+
     }
 
 }

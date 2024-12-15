@@ -15,7 +15,11 @@
                 <Image url="@assets/pngtree-cream-colored.png" />
             </image>
         </ImageView>
-        <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" text="←" />
+
+        <!-- Back Button -->
+        <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="0" prefWidth="70.0" text="←" />
+
+
         <Label layoutX="116.0" layoutY="50.0" prefHeight="60.0" prefWidth="403.0" text="Edit Ministry" underline="true">
             <font>
                 <Font name="Bodoni MT Bold" size="48.0" />

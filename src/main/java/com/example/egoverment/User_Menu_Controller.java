@@ -17,6 +17,7 @@ public class User_Menu_Controller {
     @FXML
     private FlowPane flowPane;
     public static String ministryName_controller;
+    public static String Currentministry;
 
 
     @FXML
@@ -44,7 +45,7 @@ public class User_Menu_Controller {
             Button ministryButton = new Button(ministryName);
 
 
-            ministryButton.setPrefSize(200, 100);
+            ministryButton.setPrefSize(250, 100);
             ministryButton.setStyle("-fx-font-size: 14px; -fx-background-color: #4682B4; -fx-text-fill: white;");
 
 
@@ -55,6 +56,8 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
+
+                        Currentministry="Education.fxml";
 
                         URL resource = getClass().getResource("Education.fxml");
                         if (resource == null) {
@@ -79,6 +82,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
+                        Currentministry="FinanceMinistry.fxml";
 
                         URL resource = getClass().getResource("FinanceMinistry.fxml");
                         if (resource == null) {
@@ -104,6 +108,7 @@ public class User_Menu_Controller {
 
                     try {
 
+                        Currentministry="Transportation.fxml";
                         URL resource = getClass().getResource("Transportation.fxml");
                         if (resource == null) {
                             throw new IOException("FXML file not found: " );
@@ -128,6 +133,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
+                        Currentministry="MinistryOfElectricity.fxml";
 
                         URL resource = getClass().getResource("MinistryOfElectricity.fxml");
                         if (resource == null) {
@@ -152,7 +158,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
-
+                        Currentministry="MinistryOfHealthAndPopulation.fxml";
                         URL resource = getClass().getResource("MinistryOfHealthAndPopulation.fxml");
                         if (resource == null) {
                             throw new IOException("FXML file not found: " );
@@ -176,7 +182,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
-
+                        Currentministry="Tourism.fxml";
                         URL resource = getClass().getResource("Tourism.fxml");
                         if (resource == null) {
                             throw new IOException("FXML file not found: " );
@@ -200,6 +206,7 @@ public class User_Menu_Controller {
                 ministryButton.setOnAction(event -> {
 
                     try {
+                        Currentministry="User_MainMenu.fxml";
                         ministryName_controller = ministryName;
                         Parent root = FXMLLoader.load(getClass().getResource("showDepartments.fxml"));
 

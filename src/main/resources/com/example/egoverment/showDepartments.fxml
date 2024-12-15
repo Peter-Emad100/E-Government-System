@@ -41,6 +41,6 @@
       <ComboBox fx:id="formIn" layoutX="313.0" layoutY="289.0" prefWidth="150.0" promptText="Select form" />
       <Button fx:id="loadFormsButton" layoutX="312.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#handleLoadRequestPage" prefHeight="38.0" prefWidth="76.0" style="-fx-background-radius: 10;" text="OK" />
       <!-- Back Button -->
-      <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="30.0" prefWidth="70.0" text="←" />
+      <Button layoutX="14.0" layoutY="14.0" onAction="#Back" prefHeight="30.0" prefWidth="70.0" text="←" />
    </children>
 </AnchorPane>

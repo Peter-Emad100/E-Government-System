@@ -86,11 +86,17 @@ public class RemoveEmpController {
                 employeeId = Integer.parseInt(empid.getText());
             } catch (NumberFormatException e) {
                 showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid Employee ID", "Please enter a valid number for Employee ID.");
+                depname.getItems().clear();
+                minname.getItems().clear();
+                empid.clear();
                 return;
             }
 
             if (selectedMinistry == null || selectedDepartment == null || employeeId == 0) {
                 showAlert(Alert.AlertType.WARNING, "Missing Input", "Incomplete Fields", "Please fill in all required fields.");
+                depname.getItems().clear();
+                minname.getItems().clear();
+                empid.clear();
                 return;
             }
 
@@ -101,6 +107,10 @@ public class RemoveEmpController {
                             if (employee.getId() == employeeId) {
                                 department.getEmployees().remove(employee);
                                 showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Removed", "The employee was removed successfully!");
+                                depname.getItems().clear();
+                                minname.getItems().clear();
+                                empid.clear();
+
                                 return;
                             }
                         }
@@ -109,6 +119,9 @@ public class RemoveEmpController {
             }
 
             showAlert(Alert.AlertType.WARNING, "Not Found", "Employee Not Found", "The specified employee was not found.");
+            depname.getItems().clear();
+            minname.getItems().clear();
+            empid.clear();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert(Alert.AlertType.ERROR, "Error", "An error occurred", e.getMessage());

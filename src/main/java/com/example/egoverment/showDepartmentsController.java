@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 
 public class showDepartmentsController {
-
+    private String Currentministry= User_Menu_Controller.Currentministry;
     private String ministryName_controller = User_Menu_Controller.ministryName_controller;
 
     private ArrayList<Ministry> ministries = MinistriesCollection.getMinistries();
@@ -37,10 +37,10 @@ public class showDepartmentsController {
         populateDepartmentsComboBox();
     }
     @FXML
-    private void Backtomenu(ActionEvent event) {
+    private void Back(ActionEvent event) {
         try {
             // Load the FXML for the primary stage images page
-            Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource(Currentministry));
 
             // Get the current stage from the event source
             Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
@@ -105,9 +105,17 @@ public class showDepartmentsController {
                 return; // Don't proceed if no form is selected
             }
 
-            // If form is selected, switch to the request page
-            Stage currentStage = (Stage) loadFormsButton.getScene().getWindow();
-            PageSwitchHelper.switcher("requestpage.fxml", "Request Page", currentStage);
+            try {
+                // Load the FXML for the primary stage images page
+                Parent root = FXMLLoader.load(getClass().getResource("requestpage.fxml"));
+
+                // Get the current stage from the event source
+                Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+                currentScene.setRoot(root); // Switch the root
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Failed to load FXML. Check the file path.");
+            }
 
         } catch (Exception e) {
             // Handle any unexpected errors and show an alert

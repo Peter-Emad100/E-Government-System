@@ -52,6 +52,7 @@ public class RequestController {
     @FXML
     private void Backtomenu(ActionEvent event) {
         try {
+
             // Load the FXML for the primary stage images page
             Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));
 
@@ -85,6 +86,7 @@ public class RequestController {
 
     @FXML
     void SubmitRequest(MouseEvent event) {
+        LocalDate selectedDate = birthdateField.getValue();
 
         //gender knowing
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
@@ -102,8 +104,15 @@ public class RequestController {
             outputLabel.setText("No option selected.");
         }
 
+        // Check if the date is null or less than 2024
+        if (selectedDate == null || selectedDate.getYear() >= 2024) {
+            // Show an alert if the date is invalid
+            showAlert("Alert", "Can't submit request, please select a valid date", Alert.AlertType.ERROR);
+            returnToOriginal();
+        }
+
         //make sure that texts aren't submitted null except for comments
-        if(addressField.getText() != null && !addressField.getText().trim().isEmpty()
+     else if(addressField.getText() != null && !addressField.getText().trim().isEmpty()
                 && nameField.getText() != null && !nameField.getText().trim().isEmpty()
                 && idField.getText() != null && !idField.getText().trim().isEmpty()
                 && birthdateField.getValue() != null)

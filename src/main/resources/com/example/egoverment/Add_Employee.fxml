@@ -43,19 +43,19 @@
       </Label>
       <TextField fx:id="empid" layoutX="298.0" layoutY="175.0" prefHeight="36.0" prefWidth="291.0" />
       <TextField fx:id="empname" layoutX="298.0" layoutY="113.0" prefHeight="36.0" prefWidth="291.0" />
-      <ComboBox fx:id="ministryComboBox" layoutX="298.0" layoutY="307.0" prefHeight="36.0" prefWidth="291.0" />
+      <ComboBox fx:id="ministryComboBox" layoutX="298.0" layoutY="237.0" prefHeight="36.0" prefWidth="291.0" />
       <Button fx:id="AddMinistryButton" layoutX="256.0" layoutY="393.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="30.0" prefWidth="188.0" text="Add Employee" />
-      <Label layoutX="22.0" layoutY="237.0" text="Enter Departments name:">
+      <Label layoutX="22.0" layoutY="307.0" text="Enter Departments name:">
          <font>
             <Font name="Bell MT" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="307.0" text="Enter Ministry name:">
+      <Label layoutX="22.0" layoutY="237.0" text="Enter Ministry name:">
          <font>
             <Font name="Bell MT" size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="departmentComboBox" layoutX="298.0" layoutY="237.0" prefHeight="36.0" prefWidth="291.0" />
+      <ComboBox fx:id="departmentComboBox" layoutX="298.0" layoutY="307.0" prefHeight="36.0" prefWidth="291.0" />
    </children>
 </AnchorPane>
 

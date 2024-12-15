@@ -30,9 +30,23 @@ public class editMinistryController {
         this.oldMinistryName = oldName;
         System.out.println("Old Ministry Name: " + oldMinistryName);  // Debugging line
     }
+    @FXML
+    private void Backtomenu(ActionEvent event) {
+        try {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("Owner_MainMenu.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+        }
+    }
 
     @FXML
-    private void onRenameMinistry() {
+    private void onRenameMinistry(ActionEvent event) {
         String newName = newMinistryNameField.getText().trim();
 
         System.out.println(newName);
@@ -63,16 +77,26 @@ public class editMinistryController {
 
         // Load the first controller (main window)
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddMinistry.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Add/Remove Ministry");  // Change the title as needed
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("AddMinistry.fxml"));
+
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
+        } catch (Exception e) {
             e.printStackTrace();
-            showAlert("Error loading the first controller.");
+            System.out.println("Failed to load FXML. Check the file path.");
         }
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddMinistry.fxml"));
+//            Parent root = loader.load();
+//            Stage stage = new Stage();
+//            stage.setTitle("Add/Remove Ministry");  // Change the title as needed
+//            stage.setScene(new Scene(root));
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            showAlert("Error loading the first controller.");
+//        }
     }
 
     private void showAlert(String message) {

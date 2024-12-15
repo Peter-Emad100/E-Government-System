@@ -32,7 +32,7 @@ public class MinistryOfHealthAndPopulationController {
     private Button visitDepartments;
 
     @FXML
-    private void Backtomenu(ActionEvent event) {
+    private void Back(ActionEvent event) {
         try {
             // Load the FXML for the primary stage images page
             Parent root = FXMLLoader.load(getClass().getResource("User_MainMenu.fxml"));

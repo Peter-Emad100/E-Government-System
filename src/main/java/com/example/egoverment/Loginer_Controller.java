@@ -49,6 +49,7 @@ public class Loginer_Controller {
             eyeIcon.setImage(new Image(imageStream));
         }
     }
+
     @FXML
     public void LoginAction(ActionEvent actionEvent) {
         String email = emailField.getText();
@@ -98,7 +99,7 @@ public class Loginer_Controller {
 
                 URL resource = getClass().getResource("User_MainMenu.fxml");
                 if (resource == null) {
-                    throw new IOException("FXML file not found: " );
+                    throw new IOException("FXML file not found: ");
                 }
 
                 Parent root = FXMLLoader.load(resource);
@@ -110,18 +111,17 @@ public class Loginer_Controller {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("Failed to load FXML. Check the file path.");
-            }
-            finally{
+            } finally {
                 passwordField.clear();
                 emailField.clear();
             }
-        } else if (OwnerCollection.search(email,password)) {
+        } else if (OwnerCollection.search(email, password)) {
             showAlert("Success", "Login Successful!", AlertType.INFORMATION);
             try {
 
                 URL resource = getClass().getResource("Owner_MainMenu.fxml");
                 if (resource == null) {
-                    throw new IOException("FXML file not found: " );
+                    throw new IOException("FXML file not found: ");
                 }
 
                 Parent root = FXMLLoader.load(resource);
@@ -133,19 +133,18 @@ public class Loginer_Controller {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("Failed to load FXML. Check the file path.");
-            }
-            finally {
+            } finally {
                 passwordField.clear();
                 emailField.clear();
             }
-        }
-        else{
+        } else {
             showAlert("failed", "failed!", AlertType.INFORMATION);
             passwordField.clear();
             emailField.clear();
 
         }
     }
+
     @FXML
     private void togglePasswordVisibility() {
         if (passwordVisibleField.isVisible()) {
@@ -167,7 +166,7 @@ public class Loginer_Controller {
 
             // (hide password)
             InputStream imageStream = getClass().getResourceAsStream("assets/pass.jpg");
-                eyeIcon.setImage(new Image(imageStream));
+            eyeIcon.setImage(new Image(imageStream));
 
         }
     }
@@ -182,23 +181,19 @@ public class Loginer_Controller {
     }
 
     @FXML
-    private void goToSignUp() {
+    private void goToSignUp(ActionEvent event) {
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
-            AnchorPane signUpPage = loader.load();
+            // Load the FXML for the primary stage images page
+            Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
 
-            SignUp_Controller signUpController = loader.getController();
-
-            Stage signUpStage = new Stage();
-            signUpStage.setTitle("Sign Up");
-            signUpStage.setScene(new Scene(signUpPage));
-
-            signUpStage.show();
-
-            Stage currentStage = (Stage) emailField.getScene().getWindow();
-            currentStage.close();
+            // Get the current stage from the event source
+            Scene currentScene = ((Scene) ((javafx.scene.Node) event.getSource()).getScene());
+            currentScene.setRoot(root); // Switch the root
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Failed to load FXML. Check the file path.");
+
         }
     }
 }
