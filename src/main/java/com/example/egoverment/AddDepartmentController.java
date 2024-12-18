@@ -66,7 +66,14 @@ public class AddDepartmentController {
 
         if (selectedMinistry == null  || depName.isEmpty() ) {
             showAlert(Alert.AlertType.WARNING, "Missing Input", "Incomplete Fields", "Please fill in all required fields.");
+            depname.clear();
             return;
+        }
+        if (depName.matches("\\d+")) {  // Regular expression to match only digits
+            showAlert(Alert.AlertType.ERROR, "Invalid Department Name", "Department Name Error", "Department name cannot be a number.");
+            depname.clear();
+            return;
+//            throw new IllegalArgumentException("Department name cannot be a number.");
         }
 
         // Find the selected ministry
@@ -75,6 +82,7 @@ public class AddDepartmentController {
                 for (Department department : ministry.getDepartments()) {
                     if (department.getDepartmentName().equals(depName)) {
                         showAlert(Alert.AlertType.WARNING, "Department already exists", "Department already exists", "Please Enter another department");
+                        depname.clear();
                         return;
                     }
                 }
@@ -82,6 +90,7 @@ public class AddDepartmentController {
                 Department newdep = new Department(depName);
                 ministry.getDepartments().add(newdep);
                 showAlert(Alert.AlertType.INFORMATION, "Success", "Department Added", "The department was added successfully!");
+                depname.clear();
                 return;
             }else{
             System.out.println("Failed to find the specified Ministry");

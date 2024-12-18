@@ -7,20 +7,9 @@
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="tourism1 MinistryOfElectricity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddDepartmentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Loginer_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/MinistryOfHealthAndPopulationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RemoveEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RemoveEmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/RequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/SignUp_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User_Menu_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User_Menu_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/editMinistryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/editMinistryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/showDepartmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/showDepartmentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Add_Employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/Add_Employee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MinistryOfHealthAndPopulation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/MinistryOfHealthAndPopulation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/editMinistry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/editMinistry.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/requestpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/requestpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/showDepartments.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/egoverment/showDepartments.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

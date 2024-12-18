@@ -72,7 +72,24 @@
         "name": "Ashraf Ibrahim",
         "id": 2
       },
-      "departments": []
+      "departments": [
+        {
+          "departmentName": "Economic Affairs",
+          "employees": [
+            {
+              "startingDate": "2024-12-18",
+              "name": "Abdullah",
+              "id": 665
+            }
+          ],
+          "forms": []
+        },
+        {
+          "departmentName": "Financial Services",
+          "employees": [],
+          "forms": []
+        }
+      ]
     },
     {
       "ministryName": "Ministry of Transportation",
@@ -102,7 +119,18 @@
       "departments": [
         {
           "departmentName": "Population health",
-          "employees": [],
+          "employees": [
+            {
+              "startingDate": "2024-12-18",
+              "name": "hana",
+              "id": 123
+            },
+            {
+              "startingDate": "2024-12-18",
+              "name": "Mazen",
+              "id": 156
+            }
+          ],
           "forms": [
             {
               "formName": "Children\u0027s health"
