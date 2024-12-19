@@ -26,28 +26,27 @@
                 <VBox alignment="CENTER" layoutX="118.0" layoutY="18.0" prefHeight="1527.0" prefWidth="295.0" spacing="10">
                     <ImageView fitHeight="493.0" fitWidth="382.0" preserveRatio="true">
                         <image>
-                            <Image url="@assets/prim_Arabic.jpg" />
+                            <Image url="@assets/prep_arabic.jpg" />
                         </image>
                     </ImageView>
 
                     <ImageView fitHeight="500" fitWidth="400.0" preserveRatio="true">
                         <image>
-                            <Image url="@assets/prim_english.jpg" />
+                            <Image url="@assets/prep_english.jpg" />
                         </image>
                     </ImageView>
 
                     <ImageView fitHeight="500" fitWidth="400.0" preserveRatio="true">
                         <image>
-                            <Image url="@assets/prim_maths.jpg" />
+                            <Image url="@assets/prep_maths.jpg" />
                         </image>
                     </ImageView>
 
-                    <!-- Add more images as needed -->
                 </VBox>
                 <!-- logo -->
-                <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="490.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="530.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@assets/education-logo.png" />
+                        <Image url="@assets/education_logo_transparent.png" />
                     </image>
                 </ImageView>
             </children>

@@ -24,11 +24,7 @@
             </font>
         </Text>
         <!-- Back Button -->
-        <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="0" prefWidth="70.0" text="←">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
+        <Button layoutX="14.0" layoutY="14.0" onAction="#Backtomenu" prefHeight="0" prefWidth="70.0" text="←" />
 
         <!-- Primary Stage Button -->
         <Button layoutX="271.0" layoutY="213.0" mnemonicParsing="false" onAction="#showPrimaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Primary Stage" />
@@ -39,10 +35,10 @@
         <!-- Secondary Stage Button -->
         <Button layoutX="271.0" layoutY="365.0" mnemonicParsing="false" onAction="#showSecondaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Secondary Stage" />
 
-        <!-- Top-Right Image -->
-        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="608.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <!-- logo -->
+        <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="545.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@assets/education-logo.png" />
+                <Image url="@assets/education_logo_transparent.png" />
             </image>
         </ImageView>
         <!-- Department Button -->

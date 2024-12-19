@@ -11,7 +11,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.egoverment.Owner_Menu_Controller">
     <children>
 
-        <!--backgroung image-->
+        <!--background image-->
         <ImageView fitHeight="509.0" fitWidth="1087.0" layoutX="-188.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@assets/pngtree-cream-colored.png" />

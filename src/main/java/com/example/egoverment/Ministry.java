@@ -37,16 +37,4 @@ public class Ministry {
         return departments;
     }
 
-    public void addDepartmentsToMinistry(String DeptName) {
-
-        departments.add(new Department(DeptName));
-    }
-    public Department findDepartmentByName(String name) {
-        for (Department department : departments) {
-            if (department.getDepartmentName().equalsIgnoreCase(name)) {
-                return department;
-            }
-        }
-        return null;
-    }
 }

@@ -42,10 +42,10 @@
 
                     <!-- Add more images as needed -->
                 </VBox>
-                <!-- Top-Right Image -->
-                <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="490.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <!-- logo -->
+                <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="530.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@assets/education-logo.png" />
+                        <Image url="@assets/education_logo_transparent.png" />
                     </image>
                 </ImageView>
             </children>
