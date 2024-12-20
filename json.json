@@ -19,7 +19,7 @@
           ],
           "forms": [
             {
-              "formName": "civil rights"
+              "formName": "Civil Rights"
             }
           ]
         }
@@ -98,7 +98,13 @@
         "name": "Maged Shawky",
         "id": 2
       },
-      "departments": []
+      "departments": [
+        {
+          "departmentName": "Trains",
+          "employees": [],
+          "forms": []
+        }
+      ]
     },
     {
       "ministryName": "Ministry Electricity and Energy",
@@ -157,20 +163,6 @@
           "departmentName": "Hotels Managment",
           "employees": [],
           "forms": []
-        }
-      ]
-    },
-    {
-      "ministryName": "tmam",
-      "departments": [
-        {
-          "departmentName": "dep",
-          "employees": [],
-          "forms": [
-            {
-              "formName": "here"
-            }
-          ]
         }
       ]
     }
@@ -305,5 +297,5 @@
     }
   ],
   "NumberOfUsers": 6,
-  "NumberOfMinistries": 8
+  "NumberOfMinistries": 7
 }

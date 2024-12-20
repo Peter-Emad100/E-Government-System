@@ -73,7 +73,6 @@ public class editMinistryController {
 
         // Close current stage (editMinistryController window)
         Stage currentStage = (Stage) editMinistryButton.getScene().getWindow();
-        currentStage.close();
 
         // Load the first controller (main window)
         try {
