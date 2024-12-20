@@ -36,7 +36,7 @@
         <Button layoutX="271.0" layoutY="365.0" mnemonicParsing="false" onAction="#showSecondaryStageImage" prefHeight="44.0" prefWidth="157.0" text="Secondary Stage" />
 
         <!-- logo -->
-        <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="545.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="81.0" fitWidth="120.0" layoutX="584.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@assets/education_logo_transparent.png" />
             </image>

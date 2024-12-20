@@ -67,7 +67,7 @@
             </TextFlow>
             <ImageView fx:id="tut1" fitHeight="179.0" fitWidth="259.0" layoutX="30.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/520px-Religious_Complex_at_Abu_Mena_(XIII).jpg" />
+                  <Image url="@assets/AbuMena.jpg" />
                </image>
             </ImageView>
             <TextFlow layoutX="289.0" layoutY="351.0" prefHeight="134.0" prefWidth="491.0">
