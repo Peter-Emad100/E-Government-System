@@ -71,7 +71,6 @@ public class editMinistryController {
         showAlert(response);
         newMinistryNameField.clear();
 
-        // Close current stage (editMinistryController window)
         Stage currentStage = (Stage) editMinistryButton.getScene().getWindow();
 
         // Load the first controller (main window)

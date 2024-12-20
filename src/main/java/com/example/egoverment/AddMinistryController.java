@@ -141,7 +141,7 @@ public class AddMinistryController {
             return;
         }
 
-//         Input is valid, navigate to the next page
+//         If input is valid, navigate to the next page
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("editMinistry.fxml"));
             Parent root = loader.load();

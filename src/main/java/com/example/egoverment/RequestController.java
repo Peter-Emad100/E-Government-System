@@ -102,7 +102,7 @@ public class RequestController {
             outputLabel.setText("No option selected.");
         }
 
-        // Check if the date is null or less than 2024
+        // Check if the date is null or it's year is greater than 2024
         if (selectedDate == null || selectedDate.getYear() >= 2024) {
             // Show an alert if the date is invalid
             showAlert("Alert", "Can't submit request, please select a valid date", Alert.AlertType.ERROR);
