@@ -58,8 +58,8 @@ public class FinanceMinistryController {
 
 
         } catch (Exception e) {
-            myData="Connection Failed \nLast updated: Mon, 02 Dec 2024 00:00:02 +0000 \n USD = 49.58 EGP \n EUR = 52.38 EGP \n JPY = 0.33 EGP \n GBP = 62.97 EGP \n" +
-                    " CNY = 6.84 EGP \n AUD = 32.25 EGP \n CHF = 56.27 EGP \n HKD = 6.37 EGP \n SGD = 36.98 EGP";
+            myData="Connection Failed \nLast updated: Fri, 20 Dec 2024 00:00:02 +0000 \n USD = 50.89 EGP \n EUR = 52.91 EGP \n JPY = 0.32 EGP \n GBP = 64.23 EGP \n" +
+                    " CNY = 6.96 EGP \n AUD = 31.77 EGP \n CHF = 56.69 EGP \n HKD = 6.55 EGP \n SGD = 37.43 EGP";
         }
 
         dataLabel.setText(myData);

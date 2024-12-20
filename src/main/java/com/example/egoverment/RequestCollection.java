@@ -11,13 +11,6 @@ public class RequestCollection {
     {
         RequestCollection.requests.add(new Request(formName, Rname, Rid, Rnotices, Rlocation, RbirthDate, gender));
     }
-    /*static{
-        requests.add(new Request("c","c","c","c","c","c",true));
-        requests.add(new Request("c","c","c","c","c","c",true));
-        requests.add(new Request("c","c","c","c","c","c",true));
-        requests.add(new Request("c","c","c","c","c","c",true));
-        requests.add(new Request("c","c","c","c","c","c",true));
-    }*/
     public static void prepareRequestsToSave(){
         FileHelper.prepareToSave(requests,savingName);
     }
