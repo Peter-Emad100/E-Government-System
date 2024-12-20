@@ -81,10 +81,10 @@ public class AddEmpController {
         String selectedMinistry = ministryComboBox.getValue();
         String selectedDepartment = departmentComboBox.getValue();
         String employeeName = empname.getText();
-        int employeeId;
+        long employeeId;
 
         try {
-            employeeId = Integer.parseInt(empid.getText());
+            employeeId = Long.parseLong(empid.getText());
         } catch (NumberFormatException e) {
             showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid Employee ID", "Please enter a valid number for Employee ID.");
 //            departmentComboBox.getItems().clear();
