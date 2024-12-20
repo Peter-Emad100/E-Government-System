@@ -16,7 +16,6 @@ public class HelloApplication extends Application {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Loginer.fxml"));
             Pane root = (Pane) loader.load();
             //Create a scene and set the stage
-            System.out.println("in");
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("");

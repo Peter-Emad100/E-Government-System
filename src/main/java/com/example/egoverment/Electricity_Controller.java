@@ -119,7 +119,6 @@ public class Electricity_Controller {
 
             // Show dialog and wait for user input
             Optional<String> result = dialog.showAndWait();
-            System.out.println(result);
             String paymentinfo = result.get().trim();
             if (result.isPresent() && !result.get().trim().isEmpty()) {
                 if (paymentinfo.length() == 16) {

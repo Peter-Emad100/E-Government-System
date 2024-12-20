@@ -129,8 +129,6 @@ public class AddEmpController {
                 }
             }
         }
-
-        System.out.println("Failed to find the specified department.");
     }
 
     private void showAlert(Alert.AlertType alertType, String title, String header, String content) {

@@ -1,6 +1,6 @@
 package com.example.egoverment;
 
-public class User extends Loginer{
+public class User extends Loginer {
     private String phone;
     static int numberOfUsers;
     User(String name, long id, String loginName, String hashedPassword,String phone,String mail) {
@@ -8,7 +8,6 @@ public class User extends Loginer{
         this.phone=phone;
         numberOfUsers++;
     }
-
 
     public String getPhone() {
         return phone;

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0897a4f3-1a8c-45f9-8731-07ed7b2d2ba9" name="Changes" comment="Final InshAllah">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/json.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/editMinistryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/editMinistryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/AddEmpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Electricity_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/Electricity_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/egoverment/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
