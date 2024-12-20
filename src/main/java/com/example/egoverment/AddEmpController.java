@@ -87,17 +87,12 @@ public class AddEmpController {
             employeeId = Long.parseLong(empid.getText());
         } catch (NumberFormatException e) {
             showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid Employee ID", "Please enter a valid number for Employee ID.");
-//            departmentComboBox.getItems().clear();
-//            ministryComboBox.getItems().clear();
             empid.clear();
-//            empname.clear();
             return;
         }
 
         if (selectedMinistry == null || selectedDepartment == null || employeeName.isEmpty() || employeeId == 0) {
             showAlert(Alert.AlertType.WARNING, "Missing Input", "Incomplete Fields", "Please fill in all required fields.");
-//            departmentComboBox.getItems().clear();
-//            ministryComboBox.getItems().clear();
             empid.clear();
             empname.clear();
             return;
@@ -127,8 +122,6 @@ public class AddEmpController {
 
 
                         showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Added to "+department.getDepartmentName(),  "The employee was added successfully!");
-//                        departmentComboBox.getItems().clear();
-//                        ministryComboBox.getItems().clear();
                         empid.clear();
                         empname.clear();
                         return;

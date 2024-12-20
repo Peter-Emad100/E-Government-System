@@ -12,8 +12,6 @@ import java.time.LocalDate;
 public class RequestController {
     String formName=showDepartmentsController.selectedForm;
 
-    private int lengthofArrRequest;
-
     @FXML
     private Label outputLabel;
 
@@ -112,7 +110,7 @@ public class RequestController {
         }
 
         //make sure that texts aren't submitted null except for comments
-     else if(addressField.getText() != null && !addressField.getText().trim().isEmpty()
+        else if(addressField.getText() != null && !addressField.getText().trim().isEmpty()
                 && nameField.getText() != null && !nameField.getText().trim().isEmpty()
                 && idField.getText() != null && !idField.getText().trim().isEmpty()
                 && birthdateField.getValue() != null)

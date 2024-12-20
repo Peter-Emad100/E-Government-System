@@ -154,35 +154,11 @@
       },
       "departments": [
         {
-          "departmentName": "fun",
-          "employees": [
-            {
-              "startingDate": "2024-12-20",
-              "name": "jajja",
-              "id": 123
-            },
-            {
-              "startingDate": "2024-12-20",
-              "name": "lklklk",
-              "id": 464
-            },
-            {
-              "startingDate": "2024-12-20",
-              "name": "klklklk",
-              "id": 565656
-            }
-          ],
-          "forms": [
-            {
-              "formName": "haha"
-            }
-          ]
+          "departmentName": "Hotels Managment",
+          "employees": [],
+          "forms": []
         }
       ]
-    },
-    {
-      "ministryName": "Ministry of BlaBla",
-      "departments": []
     },
     {
       "ministryName": "tmam",
@@ -329,5 +305,5 @@
     }
   ],
   "NumberOfUsers": 6,
-  "NumberOfMinistries": 9
+  "NumberOfMinistries": 8
 }

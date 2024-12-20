@@ -56,38 +56,20 @@ public class Loginer_Controller {
         String password = passwordField.getText();
 
         if (email.isEmpty()) {
-            showAlert("Invalid Email", "Username must not be empty.", AlertType.ERROR);
+            showAlert("Invalid Email", "Username can't be empty.", AlertType.ERROR);
             passwordField.clear();
             emailField.clear();
             return;
         }
         if (!email.contains(".com") || !email.contains("@")) {
-            showAlert("Invalid Username", "Username must contain '@gmail.com'.", AlertType.ERROR);
+            showAlert("Invalid Email", "Email must contain '@gmail.com'.", AlertType.ERROR);
             passwordField.clear();
             emailField.clear();
             return;
         }
 
         if (password.isEmpty()) {
-            showAlert("Invalid Password", "Password must not be empty.", AlertType.ERROR);
-            passwordField.clear();
-            emailField.clear();
-            return;
-        }
-        if (password.length() < 8) {
-            showAlert("Invalid Password", "Password must be at least 8 characters long.", AlertType.ERROR);
-            passwordField.clear();
-            emailField.clear();
-            return;
-        }
-        if (!password.matches(".*[0-9].*")) {
-            showAlert("Invalid Password", "Password must contain at least one number.", AlertType.ERROR);
-            passwordField.clear();
-            emailField.clear();
-            return;
-        }
-        if (!password.matches(".*[!@#$%^&*()].*")) {
-            showAlert("Invalid Password", "Password must contain at least one special character.", AlertType.ERROR);
+            showAlert("Invalid Password", "Password can't be empty.", AlertType.ERROR);
             passwordField.clear();
             emailField.clear();
             return;
@@ -138,7 +120,7 @@ public class Loginer_Controller {
                 emailField.clear();
             }
         } else {
-            showAlert("failed", "failed!", AlertType.INFORMATION);
+            showAlert("failed", "Wrong Credentials!", AlertType.INFORMATION);
             passwordField.clear();
             emailField.clear();
 

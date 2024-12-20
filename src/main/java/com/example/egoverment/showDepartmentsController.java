@@ -26,6 +26,14 @@ public class showDepartmentsController {
     public static String selectedForm;
 
     @FXML
+    private ComboBox<String> departmentIn;
+    @FXML
+    private ComboBox<String> formIn;
+
+    @FXML
+    private Button loadFormsButton;
+
+    @FXML
     private void initializeDepartments() {
         for (Ministry ministry : ministries) {
             if (this.ministryName_controller.equals(ministry.getMinistryName())) {
@@ -36,6 +44,7 @@ public class showDepartmentsController {
 
         populateDepartmentsComboBox();
     }
+
     @FXML
     private void Back(ActionEvent event) {
         try {
@@ -50,6 +59,7 @@ public class showDepartmentsController {
             System.out.println("Failed to load FXML. Check the file path.");
         }
     }
+
     @FXML
     private void populateDepartmentsComboBox() {
         if (departments != null && !departments.isEmpty()) {
@@ -70,6 +80,7 @@ public class showDepartmentsController {
             }
         });
     }
+
     private void populateFormsComboBox(String departmentName) {
         formIn.getItems().clear(); // Clear previous forms
         for (Department department : departments) {
@@ -81,16 +92,6 @@ public class showDepartmentsController {
             }
         }
     }
-
-
-    @FXML
-    private ComboBox<String> departmentIn;
-    @FXML
-    private ComboBox<String> formIn;
-
-    @FXML
-    private Button loadFormsButton;
-
 
     @FXML
     void handleLoadRequestPage(MouseEvent event) {
@@ -122,10 +123,6 @@ public class showDepartmentsController {
             showAlert("Error", "An unexpected error occurred: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
-
-
-
-
 
     @FXML
     private void initialize() {

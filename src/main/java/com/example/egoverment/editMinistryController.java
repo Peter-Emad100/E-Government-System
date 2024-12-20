@@ -87,16 +87,6 @@ public class editMinistryController {
             e.printStackTrace();
             System.out.println("Failed to load FXML. Check the file path.");
         }
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddMinistry.fxml"));
-//            Parent root = loader.load();
-//            Stage stage = new Stage();
-//            stage.setTitle("Add/Remove Ministry");  // Change the title as needed
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            showAlert("Error loading the first controller.");
-//        }
     }
 
     private void showAlert(String message) {

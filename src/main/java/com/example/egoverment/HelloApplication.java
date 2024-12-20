@@ -23,7 +23,6 @@ public class HelloApplication extends Application {
             primaryStage.show();
 
             //Access the controller if needed
-            //           Loginer_Controller controller = loader.getController();
             Loginer_Controller controller = loader.getController();
         } catch (Exception e) {
             e.printStackTrace();
@@ -31,27 +30,10 @@ public class HelloApplication extends Application {
         }
     }
 
-    //    public static void main(String[] args) {
-    //        launch();
-    //    }
-
-    //    public void start(Stage primaryStage) throws Exception{
-    //        Parent root = FXMLLoader.load(getClass().getResource("FinanceMinistry.fxml"));
-    //        primaryStage.setTitle("E-government System");
-    //        primaryStage.setScene(new Scene(root));
-    //        primaryStage.show();
-    //    }
     public static void main (String[] args){
 
         FileHelper.retrieveAll();
         launch(args);
-        //        ArrayList<Ministry> ministries= new ArrayList<>();
-        //        ministries=MinistriesCollection.getMinistries();
-        //        int length = ministries.size()-1;
-        //        for(int i=0;i<length;i++)
-        //        {
-        //            System.out.println(i + ministries.get(i).getMinistryName());
-        //        }
         FileHelper.saveAll();
 
     }

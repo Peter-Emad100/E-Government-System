@@ -33,13 +33,6 @@ public class Department {
         this.employees = employees;
     }
 
-    /* public  String getEmployee1() {
-
-                return employees.getFirst().getName();
-            }*/
-   /* public void addEmployee(Employee employee) {
-        employees.add(employee);
-    }*/
     public boolean removeEmployee(int employeeId) {
         return employees.removeIf(emp -> emp.getId() == employeeId);
     }
