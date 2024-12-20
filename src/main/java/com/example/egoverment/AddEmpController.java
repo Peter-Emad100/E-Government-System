@@ -123,10 +123,10 @@ public class AddEmpController {
                             department.setEmployees(new ArrayList<>());
                         }
                         department.getEmployees().add(newEmployee);
-                         newEmployee.inDepartment(department);
-//                         System.out.println("Employee is successfully added to department name="+newEmployee.getdapname());
 
-                        showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Added to "+newEmployee.getdapname(), "The employee was added successfully!");
+
+
+                        showAlert(Alert.AlertType.INFORMATION, "Success", "Employee Added to "+department.getDepartmentName(),  "The employee was added successfully!");
 //                        departmentComboBox.getItems().clear();
 //                        ministryComboBox.getItems().clear();
                         empid.clear();

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Employee extends Human{
     private String startingDate;
-    private Department department;
+
 
     public Employee(String name, int id){
         super(name,id);
@@ -13,11 +13,6 @@ public class Employee extends Human{
     public String getStartingDate(){
         return startingDate;
     }
-    public String getdapname(){
-        return department.getDepartmentName();
-    }
-    public void inDepartment(Department d){
-       this.department=d;
-    }
+
 
 }
