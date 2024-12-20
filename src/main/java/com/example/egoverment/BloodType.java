@@ -16,10 +16,6 @@ public enum BloodType {
         this.type = type;
     }
 
-
-    public String getType() {
-        return type;
-    }
     //helps in displaying the value in string representation rather than Enum ( "A+" instead of A_POS)
     @Override
     public String toString() {

@@ -70,7 +70,7 @@ public class showDepartmentsController {
             System.out.println("No departments available for this ministry.");
         }
 
-        // Add a listener to the department ComboBox
+        // Add a listener to the department ComboBox that automatically shows all forms once selecting a certain department, no need for a 2nd button :)
         departmentIn.valueProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -82,10 +82,10 @@ public class showDepartmentsController {
     }
 
     private void populateFormsComboBox(String departmentName) {
-        formIn.getItems().clear(); // Clear previous forms
+        formIn.getItems().clear(); // Clear previous forms if the user has chosen another form
         for (Department department : departments) {
             if (department.getDepartmentName().equals(departmentName)) {
-                for (Form form : department.forms) { // Assuming forms is a public field in Department
+                for (Form form : department.forms) {
                     formIn.getItems().add(form.getFormName());
                 }
                 break;
@@ -96,14 +96,14 @@ public class showDepartmentsController {
     @FXML
     void handleLoadRequestPage(MouseEvent event) {
         try {
-            // Check if a form is selected
-            selectedForm = formIn.getValue(); // Get the selected form
+
+            selectedForm = formIn.getValue();
             System.out.println(selectedForm);
 
             if (selectedForm == null || selectedForm.isEmpty()) {
-                // Show an alert if no form is selected
+
                 showAlert("Error", "Please select a form before proceeding.", Alert.AlertType.ERROR);
-                return; // Don't proceed if no form is selected
+                return;
             }
 
             try {
@@ -119,7 +119,7 @@ public class showDepartmentsController {
             }
 
         } catch (Exception e) {
-            // Handle any unexpected errors and show an alert
+
             showAlert("Error", "An unexpected error occurred: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
@@ -127,7 +127,7 @@ public class showDepartmentsController {
     @FXML
     private void initialize() {
 
-        initializeDepartments(); // Initialize departments on page load
+        initializeDepartments();
     }
 
     private void showAlert(String title, String message, Alert.AlertType alertType) {

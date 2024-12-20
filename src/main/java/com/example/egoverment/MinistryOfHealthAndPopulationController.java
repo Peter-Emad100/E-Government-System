@@ -72,20 +72,17 @@ public class MinistryOfHealthAndPopulationController {
     @FXML
     void searchBloodBanksOnClick(MouseEvent event) {
         try {
-
             BloodType selectedType = BloodTypeIn.getValue();
             if (selectedType == null) {
                 showAlert("Error", "Please select a blood type!", AlertType.ERROR);
                 return;
             }
 
-
             String quantityText = QuantityIn.getText();
             if (quantityText.isEmpty()) {
                 showAlert("Error", "Please enter the required quantity!", AlertType.ERROR);
                 return;
             }
-
 
             int requiredQuantity;
             try {
@@ -95,27 +92,26 @@ public class MinistryOfHealthAndPopulationController {
                     return;
                 }
             } catch (NumberFormatException e) {
-                showAlert("Error", "Quantity must be a valid number!", AlertType.ERROR);
+                showAlert("Error", "Quantity must be an integer number!", AlertType.ERROR);
                 return;
             }
 
+            List<String> resultMessages = MinistryOfHealthAndPopulation.searchBloodBanks(selectedType, requiredQuantity);
 
-            List<BloodBank> matchingBanks = MinistryOfHealthAndPopulation.searchBloodBanks(selectedType, requiredQuantity);
-
-
-            if (matchingBanks.isEmpty()) {
+            if (resultMessages.isEmpty()) {
                 showAlert("Search Result", "No blood banks found matching the criteria.", AlertType.INFORMATION);
             } else {
-                StringBuilder resultMessage = new StringBuilder("Matching Blood Banks:\n");
-                for (BloodBank bank : matchingBanks) {
-                    resultMessage.append("- ").append(bank.getLocation()).append("\n");
+                StringBuilder resultMessage = new StringBuilder("Search Results:\n");
+                for (String message : resultMessages) {
+                    resultMessage.append("- ").append(message).append("\n");
                 }
                 showAlert("Search Result", resultMessage.toString(), AlertType.INFORMATION);
             }
         } catch (Exception e) {
-            showAlert("Error", "An unexpected error occurred: " + e.getMessage(), AlertType.ERROR);
+            showAlert("Error", "unexpected error occurred: " + e.getMessage(), AlertType.ERROR);
         }
     }
+
 
 
     private void showAlert(String title, String message, AlertType alertType) {
