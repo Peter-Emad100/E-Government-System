@@ -22,6 +22,15 @@
               "formName": "Civil Rights"
             }
           ]
+        },
+        {
+          "departmentName": "Civil status",
+          "employees": [],
+          "forms": [
+            {
+              "formName": "renew social security number card"
+            }
+          ]
         }
       ]
     },
